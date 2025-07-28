@@ -1,0 +1,2 @@
+D:/flutter-pos-system-master/android/app/.cxx/Debug/30g292w5/armeabi-v7a/CMakeFiles/edit_cache.dir
+D:/flutter-pos-system-master/android/app/.cxx/Debug/30g292w5/armeabi-v7a/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,182 @@
+name: Add Artifacts for Release Candidate
+
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Draft a release in specific tag. e.x v1.2.3-rc1"
+        required: false
+      skip-release:
+        description: "Skip building GitHub release"
+        required: false
+        default: "false"
+
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+-rc[0-9]+"
+
+jobs:
+  check-version:
+    name: Check pubspec.yaml version with tag
+    runs-on: ubuntu-latest
+    outputs:
+      build_code: ${{ steps.pubspec_version.outputs.code }}
+      # v1.2.3-rc1 => v1.2.3-rc1
+      tag: ${{ steps.tag.outputs.result }}
+      # v1.2.3-rc1 => 1.2.3
+      tag_version: ${{ steps.pubspec_version.outputs.version }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # v1.2.3-rc1 => 1.2.3
+      - name: Extract tag version name
+        if: ${{ github.event_name != 'workflow_dispatch' }}
+        id: tag_version
+        uses: actions/github-script@v7
+        with:
+          result-encoding: string
+          script: |
+            const version = context.payload.ref.replace(/\/?refs\/tags\/v/, '');
+            const index = version.indexOf('-');
+
+            return version.substr(0, index === -1 ? undefined : index);
+
+      # v1.2.3-rc1 => v1.2.3-rc1
+      - name: Extract tag name
+        id: tag
+        uses: actions/github-script@v7
+        with:
+          result-encoding: string
+          script: |
+            return context.eventName === 'workflow_dispatch'
+              ? '${{ github.event.inputs.tag }}'
+              : context.payload.ref.replace(/\/?refs\/tags\//, '');
+
+      - name: Extract pubspec version and code
+        id: pubspec_version
+        run: |
+          ver=$(grep -m 1 '^version: ' pubspec.yaml | cut -d' ' -f2)
+          echo "version=$(echo "$ver" | cut -f1 -d"+")" >> $GITHUB_OUTPUT
+          echo "code=$(echo "$ver" | cut -f2- -d"+")" >> $GITHUB_OUTPUT
+
+      - name: Check version
+        if: ${{ github.event_name != 'workflow_dispatch' && steps.tag_version.outputs.result != steps.pubspec_version.outputs.version }}
+        run: |
+          echo '${{ steps.tag_version.outputs.result }} is not equal to ${{ steps.pubspec_version.outputs.version }}''
+          exit 1
+
+  # If it is first RC tag, create pre-release
+  rc-release:
+    name: Create RC release
+    if: ${{ github.event_name != 'workflow_dispatch' || github.event.inputs.skip-release != 'true'}}
+    runs-on: ubuntu-latest
+    needs: check-version
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build Changelog
+        id: build_changelog
+        if: ${{ endsWith(needs.check-version.outputs.tag, '-rc1') }}
+        uses: mikepenz/release-changelog-builder-action@v4
+        with:
+          configuration: "release.config.json"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Draft release with changelog
+        if: ${{ endsWith(needs.check-version.outputs.tag, '-rc1') }}
+        uses: softprops/action-gh-release@v2
+        with:
+          name: v${{ needs.check-version.outputs.tag_version }}
+          tag_name: ${{ needs.check-version.outputs.tag }}
+          body: ${{ steps.build_changelog.outputs.changelog }}
+          draft: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # Build APK to release, only work if you using tag.
+  # create-asset:
+  #   name: Create Android build
+  #   runs-on: ubuntu-latest
+  #   needs:
+  #     - check-version
+  #   steps:
+  #     # Setup Java environment in order to build the Android app.
+  #     - uses: actions/setup-java@v4
+  #       with:
+  #         distribution: "zulu"
+  #         java-version: "17"
+
+  #     # Setup the flutter environment.
+  #     - name: Set up Flutter
+  #       uses: subosito/flutter-action@v2
+  #       with:
+  #         flutter-version: "3.27.x"
+  #         cache: true
+  #         channel: "stable"
+
+  #     # Checkout code.
+  #     - name: Checkout code
+  #       uses: actions/checkout@v4
+
+  #     # Recreate missing files, and get packages.
+  #     - name: Build dependencies
+  #       env:
+  #         GH_READ_PAT: ${{ secrets.GH_READ_PAT }}
+  #       run: |
+  #         echo "https://oauth:$GH_READ_PAT@github.com" > ~/.git-credentials
+  #         git config --global credential.helper store
+  #         flutter pub get
+
+  #     - name: Configure Google Services
+  #       run: echo "$GOOGLE_SERVICES_JSON" > google-services.json
+  #       env:
+  #         GOOGLE_SERVICES_JSON: ${{ secrets.GOOGLE_SERVICES_JSON_DEV }}
+  #       working-directory: android/app
+
+  #     - name: Configure Play Store
+  #       run: |
+  #         echo "$PLAY_STORE_UPLOAD_KEY" | base64 --decode > app/upload-keystore.jks
+  #         echo "storeFile=upload-keystore.jks" >> key.properties
+  #         echo "keyAlias=$KEYSTORE_KEY_ALIAS" >> key.properties
+  #         echo "storePassword=$KEYSTORE_STORE_PASSWORD" >> key.properties
+  #         echo "keyPassword=$KEYSTORE_KEY_PASSWORD" >> key.properties
+  #       env:
+  #         PLAY_STORE_UPLOAD_KEY: ${{ secrets.PLAY_STORE_UPLOAD_KEY }}
+  #         KEYSTORE_KEY_ALIAS: ${{ secrets.KEYSTORE_KEY_ALIAS }}
+  #         KEYSTORE_KEY_PASSWORD: ${{ secrets.KEYSTORE_KEY_PASSWORD }}
+  #         KEYSTORE_STORE_PASSWORD: ${{ secrets.KEYSTORE_STORE_PASSWORD }}
+  #       working-directory: android
+
+  #     # Build the application.
+  #     - name: Start building
+  #       run: |
+  #         flutter build apk --release --verbose \
+  #           --flavor dev \
+  #           --dart-define=appFlavor=dev \
+  #           --dart-define=logLevel=info
+  #         mv build/app/outputs/flutter-apk/app-dev-release.apk \
+  #           $GITHUB_WORKSPACE/pos_system.apk
+
+  #     - name: Get upload URL
+  #       id: get_release
+  #       run: |
+  #         release=$(curl -s \
+  #           -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+  #           -H 'Accept: application/vnd.github.v3+json' \
+  #           https://api.github.com/repos/evan361425/flutter-pos-system/releases \
+  #           | jq -c '.[] | select( .name | contains("${{ needs.check-version.outputs.tag_version }}"))')
+  #         echo "upload_url=$(echo "$release" | jq -r '.upload_url')" >> $GITHUB_OUTPUT
+
+  #     # Upload the build.
+  #     - name: Upload built package to release
+  #       id: upload_release_asset
+  #       uses: shogo82148/actions-upload-release-asset@v1
+  #       with:
+  #         upload_url: ${{ steps.get_release.outputs.upload_url }}
+  #         asset_path: ./pos_system.apk
+  #         asset_name: pos_system.dev.${{ needs.check-version.outputs.build_code }}.apk
+  #         asset_content_type: application/vnd.android.package-archive
