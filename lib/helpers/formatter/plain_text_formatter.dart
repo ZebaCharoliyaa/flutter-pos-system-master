@@ -417,7 +417,7 @@ class _OATransformer extends ModelTransformer<OrderAttributes> {
           final details = [
             e.isDefault ? S.transitPTFormatModelOaDefaultOption : '',
             e.modeValue == null ? '' : S.transitPTFormatModelOaModeValue(e.modeValue!),
-          ].where((e) => e.isNotEmpty).join('，');
+          ].where((e) => e?.isNotEmpty).join('，');
           return details.isEmpty ? e.name : '${e.name}（$details）';
         }).join('、');
         details = details.isEmpty ? '' : '：$details';
