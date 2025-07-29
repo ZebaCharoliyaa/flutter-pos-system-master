@@ -230,6 +230,7 @@
 import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
@@ -254,6 +255,7 @@ import 'package:possystem/settings/settings_provider.dart';
 import 'package:possystem/helpers/logger.dart';
 import 'package:possystem/firebase_compatible_options.dart';
 import 'package:possystem/app.dart';
+import 'package:possystem/l10n/app_localizations.dart'; // ✅ Manual localization
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -262,11 +264,11 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  print('✅ Firebase Connected to Project: \${DefaultFirebaseOptions.currentPlatform.projectId}');
+  print('✅ Firebase Connected to Project: ${DefaultFirebaseOptions.currentPlatform.projectId}');
 
   if (Firebase.apps.isEmpty) {
     await Firebase.initializeApp();
-    Log.out('Firebase initialized: \${DefaultFirebaseOptions.currentPlatform.appId}', 'init');
+    Log.out('Firebase initialized: ${DefaultFirebaseOptions.currentPlatform.appId}', 'init');
   }
 
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
@@ -322,7 +324,21 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider.value(value: Cart.instance),
         ChangeNotifierProvider.value(value: Printers.instance),
       ],
-      child: const App(),
+      child: MaterialApp(
+        title: 'POS System',
+        theme: ThemeData(primarySwatch: Colors.blue),
+        localizationsDelegates: const [
+          AppLocalizations.delegate, // ✅ Your manual localization delegate
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: const [
+          Locale('en'),
+          Locale('zh'),
+        ],
+        home: const App(), // Your main App widget
+      ),
     );
   }
 }

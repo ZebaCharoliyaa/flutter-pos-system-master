@@ -200,17 +200,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-  generate: true
-
-  # ✅ Localization setup
-  localizations:
-    arb-dir: lib/l10n
-    template-arb-file: app_en.arb
-    output-localization-file: app_localizations.dart
-    output-class: AppLocalizations
-    preferred-supported-locales:
-      - en
-      - zh
+  # generate: true
 
   assets:
     - assets/food_placeholder.png
