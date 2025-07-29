@@ -3,6 +3,8 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
+        // This is required for Flutter plugin resolution
+        includeBuild("../..")
     }
 }
 
