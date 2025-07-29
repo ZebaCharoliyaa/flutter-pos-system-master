@@ -4192,6 +4192,10 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Select All'**
   String get analysisChartModalTargetItemSelectAll;
+
+  get orderCheckoutAttributeNoteHint => null;
+
+  String get orderCheckoutAttributeNoteTitle => 'Order Note';
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
