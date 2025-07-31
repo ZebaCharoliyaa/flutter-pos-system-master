@@ -31,12 +31,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get settingElfDescription => 'Provide feedback using Google Forms';
 
   @override
-<<<<<<< HEAD
   String get settingElfContent =>
       'Feel like something\'s missing here?\nFeel free to [give suggestions](https://forms.gle/s8V5SXuqhA1u3zmt7).\nYou can also check out [upcoming features](https://github.com/evan361425/flutter-pos-system/milestones).';
-=======
-  String get settingElfContent => 'Feel like something\'s missing here?\nFeel free to [give suggestions](https://forms.gle/s8V5SXuqhA1u3zmt7).\nYou can also check out [upcoming features](https://github.com/evan361425/flutter-pos-system/milestones).';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get settingFeatureTitle => 'Other Settings';
@@ -49,14 +45,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String settingThemeName(String name) {
-<<<<<<< HEAD
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'dark': 'Dark Mode',
-      'light': 'Light Mode',
-      'system': 'Follow System',
-      'other': 'UNKNOWN',
-    });
-=======
     String _temp0 = intl.Intl.selectLogic(
       name,
       {
@@ -66,7 +54,6 @@ class AppLocalizationsEn extends AppLocalizations {
         'other': 'UNKNOWN',
       },
     );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     return '$_temp0';
   }
 
@@ -78,14 +65,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String settingCheckoutWarningName(String name) {
-<<<<<<< HEAD
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'showAll': 'Show All',
-      'onlyNotEnough': 'Show Only When Not Enough',
-      'hideAll': 'Hide All',
-      'other': 'UNKNOWN',
-    });
-=======
     String _temp0 = intl.Intl.selectLogic(
       name,
       {
@@ -95,31 +74,21 @@ class AppLocalizationsEn extends AppLocalizations {
         'other': 'UNKNOWN',
       },
     );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     return '$_temp0';
   }
 
   @override
   String settingCheckoutWarningTip(String name) {
-<<<<<<< HEAD
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'showAll':
-          'Show warning when using smaller denominations to give change.\nFor example, if \$5 is not enough, start using 5 \$1 bills for change.',
-      'onlyNotEnough': 'Show warning when cash registry not enough money.',
-      'hideAll': 'Won\'t display any warnings during ordering.',
-      'other': 'UNKNOWN',
-    });
-=======
     String _temp0 = intl.Intl.selectLogic(
       name,
       {
-        'showAll': 'Show warning when using smaller denominations to give change.\nFor example, if \$5 is not enough, start using 5 \$1 bills for change.',
+        'showAll':
+            'Show warning when using smaller denominations to give change.\nFor example, if \$5 is not enough, start using 5 \$1 bills for change.',
         'onlyNotEnough': 'Show warning when cash registry not enough money.',
         'hideAll': 'Won\'t display any warnings during ordering.',
         'other': 'UNKNOWN',
       },
     );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     return '$_temp0';
   }
 
@@ -127,48 +96,31 @@ class AppLocalizationsEn extends AppLocalizations {
   String get settingOrderAwakeningTitle => 'Keep Screen On During Ordering';
 
   @override
-<<<<<<< HEAD
   String get settingOrderAwakeningDescription =>
       'If disabled, the screen will turn off based on system settings during ordering.';
-=======
-  String get settingOrderAwakeningDescription => 'If disabled, the screen will turn off based on system settings during ordering.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get settingReportTitle => 'Collect Error Messages and Events';
 
   @override
-<<<<<<< HEAD
   String get settingReportDescription =>
       'Send error messages when the app encounters issues, helping the app improve';
-=======
-  String get settingReportDescription => 'Send error messages when the app encounters issues, helping the app improve';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get stockTab => 'Inventory';
 
   @override
   String stockUpdatedAt(DateTime updatedAt) {
-<<<<<<< HEAD
-    final intl.DateFormat updatedAtDateFormat = intl.DateFormat.MMMEd(
-      localeName,
-    );
-=======
-    final intl.DateFormat updatedAtDateFormat = intl.DateFormat.MMMEd(localeName);
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
+    final intl.DateFormat updatedAtDateFormat =
+        intl.DateFormat.MMMEd(localeName);
     final String updatedAtString = updatedAtDateFormat.format(updatedAt);
 
     return 'Last Purchased: $updatedAtString';
   }
 
   @override
-<<<<<<< HEAD
   String get stockIngredientEmptyBody =>
       'Once ingredients are added, you can start tracking their inventory!';
-=======
-  String get stockIngredientEmptyBody => 'Once ingredients are added, you can start tracking their inventory!';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get stockIngredientTitleCreate => 'Add Ingredient';
@@ -183,24 +135,16 @@ class AppLocalizationsEn extends AppLocalizations {
   String get stockIngredientTutorialTitle => 'Add Ingredient';
 
   @override
-<<<<<<< HEAD
   String get stockIngredientTutorialContent =>
       'Ingredients help us track product inventory.\n\nYou can add ingredients in \"Menu\"\nand then manage inventory here.';
-=======
-  String get stockIngredientTutorialContent => 'Ingredients help us track product inventory.\n\nYou can add ingredients in \"Menu\"\nand then manage inventory here.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String stockIngredientDialogDeletionContent(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-<<<<<<< HEAD
       other:
           'Deleting this ingredient will also remove it from $count products',
-=======
-      other: 'Deleting this ingredient will also remove it from $count products',
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
       zero: 'No products currently use this ingredient',
     );
     return '$_temp0';
@@ -227,19 +171,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get stockIngredientAmountMaxLabel => 'Maximum Amount';
 
   @override
-<<<<<<< HEAD
   String get stockIngredientAmountMaxHelper =>
       'Setting this value helps you see how much of the ingredient is being used.\nLeave blank or don\'t fill it in, and the value will automatically be set each time inventory is increased.';
 
   @override
   String get stockIngredientRestockTitle =>
       'The amount of ingredient you can restock each time.\nFor example, if 30 units of cheese cost 100 dollars,\nfill in \"30\" for \"Restock Unit\" and \"100\" for \"Restock Price.\"\n\nThis helps you quickly restock by price.';
-=======
-  String get stockIngredientAmountMaxHelper => 'Setting this value helps you see how much of the ingredient is being used.\nLeave blank or don\'t fill it in, and the value will automatically be set each time inventory is increased.';
-
-  @override
-  String get stockIngredientRestockTitle => 'The amount of ingredient you can restock each time.\nFor example, if 30 units of cheese cost 100 dollars,\nfill in \"30\" for \"Restock Unit\" and \"100\" for \"Restock Price.\"\n\nThis helps you quickly restock by price.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get stockIngredientRestockPriceLabel => 'Restock Price';
@@ -253,12 +190,8 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-<<<<<<< HEAD
   String get stockIngredientRestockDialogSubtitle =>
       'Please enter the purchase price';
-=======
-  String get stockIngredientRestockDialogSubtitle => 'Please enter the purchase price';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get stockIngredientRestockDialogQuantityTab => 'Quantity';
@@ -270,12 +203,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get stockIngredientRestockDialogQuantityLabel => 'Current Amount';
 
   @override
-<<<<<<< HEAD
   String get stockIngredientRestockDialogQuantityHelper =>
       'If Maximum Amount is not set, every time increase the amount will be considered as the Maximum Amount';
-=======
-  String get stockIngredientRestockDialogQuantityHelper => 'If Maximum Amount is not set, every time increase the amount will be considered as the Maximum Amount';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get stockIngredientRestockDialogPriceTab => 'Price';
@@ -287,12 +216,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get stockIngredientRestockDialogPriceLabel => 'Total Price';
 
   @override
-<<<<<<< HEAD
   String get stockIngredientRestockDialogPriceEmptyBody =>
       'Set the restock price first to calculate the amount directly from the price.\n';
-=======
-  String get stockIngredientRestockDialogPriceEmptyBody => 'Set the restock price first to calculate the amount directly from the price.\n';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get stockIngredientRestockDialogPriceOldAmount => 'Origin';
@@ -301,12 +226,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get stockReplenishmentButton => 'Replenish';
 
   @override
-<<<<<<< HEAD
   String get stockReplenishmentEmptyBody =>
       'Purchasing helps you quickly adjust ingredient inventory';
-=======
-  String get stockReplenishmentEmptyBody => 'Purchasing helps you quickly adjust ingredient inventory';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get stockReplenishmentTitleList => 'Replenishment';
@@ -336,13 +257,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String stockReplenishmentApplyConfirmColumn(String value) {
-<<<<<<< HEAD
-    String _temp0 = intl.Intl.selectLogic(value, {
-      'name': 'Name',
-      'amount': 'Amount',
-      'other': 'UNKNOWN',
-    });
-=======
     String _temp0 = intl.Intl.selectLogic(
       value,
       {
@@ -351,28 +265,19 @@ class AppLocalizationsEn extends AppLocalizations {
         'other': 'UNKNOWN',
       },
     );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     return '$_temp0';
   }
 
   @override
-<<<<<<< HEAD
   String get stockReplenishmentApplyConfirmHint =>
       'After apply, following ingredients will be adjusted';
-=======
-  String get stockReplenishmentApplyConfirmHint => 'After apply, following ingredients will be adjusted';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get stockReplenishmentTutorialTitle => 'Replenishment';
 
   @override
-<<<<<<< HEAD
   String get stockReplenishmentTutorialContent =>
       'Through Replenishment, you no longer need to set the inventory of each ingredient one by one.\nSet up Replenishment now and adjust multiple ingredients at once!';
-=======
-  String get stockReplenishmentTutorialContent => 'Through Replenishment, you no longer need to set the inventory of each ingredient one by one.\nSet up Replenishment now and adjust multiple ingredients at once!';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get stockReplenishmentNameLabel => 'Replenishment Name';
@@ -381,30 +286,19 @@ class AppLocalizationsEn extends AppLocalizations {
   String get stockReplenishmentNameHint => 'e.g., Costco Shopping';
 
   @override
-<<<<<<< HEAD
   String get stockReplenishmentNameErrorRepeat =>
       'Replenishment name already exists';
-=======
-  String get stockReplenishmentNameErrorRepeat => 'Replenishment name already exists';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get stockReplenishmentIngredientsDivider => 'Ingredients';
 
   @override
-<<<<<<< HEAD
   String get stockReplenishmentIngredientsHelper =>
       'Click to set the quantity of different ingredients to be purchased';
 
   @override
   String get stockReplenishmentIngredientAmountHint =>
       'Set the amount to increase/decrease';
-=======
-  String get stockReplenishmentIngredientsHelper => 'Click to set the quantity of different ingredients to be purchased';
-
-  @override
-  String get stockReplenishmentIngredientAmountHint => 'Set the amount to increase/decrease';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get stockQuantityTitle => 'Quantities';
@@ -419,7 +313,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get stockQuantityTitleUpdate => 'Edit Quantity';
 
   @override
-<<<<<<< HEAD
   String get stockQuantityEmptyBody =>
       'Quantity allows for quick adjustments to the amount of ingredients, such as:\nHalf Sugar, Low Sugar.';
 
@@ -427,13 +320,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String stockQuantityMetaProportion(num proportion) {
     final intl.NumberFormat proportionNumberFormat =
         intl.NumberFormat.decimalPattern(localeName);
-=======
-  String get stockQuantityEmptyBody => 'Quantity allows for quick adjustments to the amount of ingredients, such as:\nHalf Sugar, Low Sugar.';
-
-  @override
-  String stockQuantityMetaProportion(num proportion) {
-    final intl.NumberFormat proportionNumberFormat = intl.NumberFormat.decimalPattern(localeName);
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     final String proportionString = proportionNumberFormat.format(proportion);
 
     return 'Default Ratio: $proportionString';
@@ -444,12 +330,8 @@ class AppLocalizationsEn extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-<<<<<<< HEAD
       other:
           'Deleting this quantity will also remove it from $count product ingredients',
-=======
-      other: 'Deleting this quantity will also remove it from $count product ingredients',
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
       zero: 'No product ingredients currently use this quantity',
     );
     return '$_temp0';
@@ -468,12 +350,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get stockQuantityProportionLabel => 'Default Ratio';
 
   @override
-<<<<<<< HEAD
   String get stockQuantityProportionHelper =>
       'Applied when this quantity is used for an ingredient.\n\nFor example:\nif this quantity is \"Large\" and the default ratio is \"1.5\",\nand there\'s a product \"Cheeseburger\" with the ingredient \"Cheese,\"\nwhich uses \"2\" units of cheese per burger,\nwhen adding this quantity,\nthe quantity of \"Cheese\" will automatically be set to \"3\" (2 * 1.5).\n\nIf set to \"1,\" there\'s no effect.\n\nIf set to \"0,\" the ingredient won\'t be used.';
-=======
-  String get stockQuantityProportionHelper => 'Applied when this quantity is used for an ingredient.\n\nFor example:\nif this quantity is \"Large\" and the default ratio is \"1.5\",\nand there\'s a product \"Cheeseburger\" with the ingredient \"Cheese,\"\nwhich uses \"2\" units of cheese per burger,\nwhen adding this quantity,\nthe quantity of \"Cheese\" will automatically be set to \"3\" (2 * 1.5).\n\nIf set to \"1,\" there\'s no effect.\n\nIf set to \"0,\" the ingredient won\'t be used.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get printerTitle => 'Printer Management';
@@ -522,18 +400,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String printerStatusName(String name) {
-<<<<<<< HEAD
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'good': 'All Good',
-      'writeFailed': 'Last Print Failed',
-      'paperNotFound': 'Paper Not Found',
-      'tooHot': 'Printer Overheated',
-      'lowBattery': 'Low Battery',
-      'printing': 'Printing',
-      'unknown': 'Unknown',
-      'other': 'UNKNOWN',
-    });
-=======
     String _temp0 = intl.Intl.selectLogic(
       name,
       {
@@ -547,20 +413,11 @@ class AppLocalizationsEn extends AppLocalizations {
         'other': 'UNKNOWN',
       },
     );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     return '$_temp0';
   }
 
   @override
   String printerSignalName(String name) {
-<<<<<<< HEAD
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'good': 'Good',
-      'normal': 'Normal',
-      'weak': 'Weak',
-      'other': 'UNKNOWN',
-    });
-=======
     String _temp0 = intl.Intl.selectLogic(
       name,
       {
@@ -570,7 +427,6 @@ class AppLocalizationsEn extends AppLocalizations {
         'other': 'UNKNOWN',
       },
     );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     return '$_temp0';
   }
 
@@ -581,10 +437,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String printerScanCount(int count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compactLong(
       locale: localeName,
-<<<<<<< HEAD
-=======
-      
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     );
     final String countString = countNumberFormat.format(count);
 
@@ -610,12 +462,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get printerErrorNotSupportTitle => 'Device Not Compatible';
 
   @override
-<<<<<<< HEAD
   String get printerErrorNotSupportContent =>
       'This device is currently unsupported.\n\n[Contact Us](mailto:evanlu361425@gmail.com) for assistance.';
-=======
-  String get printerErrorNotSupportContent => 'This device is currently unsupported.\n\n[Contact Us](mailto:evanlu361425@gmail.com) for assistance.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get printerErrorBluetoothOff => 'Bluetooth is off';
@@ -630,12 +478,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get printerErrorCanceled => 'Printer connection request interrupted';
 
   @override
-<<<<<<< HEAD
   String get printerErrorTimeoutMore =>
       'Try the following:\n• Check if the device is powered on (usually will flash)\n• Ensure the device is within range\n• Restart Bluetooth';
-=======
-  String get printerErrorTimeoutMore => 'Try the following:\n• Check if the device is powered on (usually will flash)\n• Ensure the device is within range\n• Restart Bluetooth';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get printerNameLabel => 'Printer Name';
@@ -652,12 +496,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get printerAutoConnLabel => 'Auto-Connect';
 
   @override
-<<<<<<< HEAD
   String get printerAutoConnHelper =>
       'Automatically connect when entering the order page';
-=======
-  String get printerAutoConnHelper => 'Automatically connect when entering the order page';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get printerMetaConnected => 'Connected';
@@ -666,12 +506,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get printerMetaExist => 'Existing, cannot add';
 
   @override
-<<<<<<< HEAD
   String get printerMetaHelper =>
       'Enable Bluetooth and keep the printer nearby';
-=======
-  String get printerMetaHelper => 'Enable Bluetooth and keep the printer nearby';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get printerSettingsTitle => 'Printer Format Settings';
@@ -680,12 +516,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get printerSettingsPaddingLabel => 'Narrow Spacing';
 
   @override
-<<<<<<< HEAD
   String get printerSettingsPaddingHelper =>
       'Reduces paper between receipts; need caution when tearing';
-=======
-  String get printerSettingsPaddingHelper => 'Reduces paper between receipts; need caution when tearing';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get printerSettingsMore => 'More Settings Coming Soon!';
@@ -751,25 +583,14 @@ class AppLocalizationsEn extends AppLocalizations {
   String get transitTitle => 'Data Transfer';
 
   @override
-<<<<<<< HEAD
   String get transitDescription =>
       'Importing and Exporting Store Information and Orders';
-=======
-  String get transitDescription => 'Importing and Exporting Store Information and Orders';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get transitMethodTitle => 'Please Select Transfer Method';
 
   @override
   String transitMethodName(String name) {
-<<<<<<< HEAD
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'googleSheet': 'Google Sheets',
-      'plainText': 'Plain Text',
-      'other': 'UNKNOWN',
-    });
-=======
     String _temp0 = intl.Intl.selectLogic(
       name,
       {
@@ -778,19 +599,11 @@ class AppLocalizationsEn extends AppLocalizations {
         'other': 'UNKNOWN',
       },
     );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     return '$_temp0';
   }
 
   @override
   String transitCatalogName(String name) {
-<<<<<<< HEAD
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'order': 'Order Records',
-      'model': 'Store Information',
-      'other': 'UNKNOWN',
-    });
-=======
     String _temp0 = intl.Intl.selectLogic(
       name,
       {
@@ -799,48 +612,25 @@ class AppLocalizationsEn extends AppLocalizations {
         'other': 'UNKNOWN',
       },
     );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     return '$_temp0';
   }
 
   @override
   String transitCatalogHelper(String name) {
-<<<<<<< HEAD
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'order': 'Export order info for detailed statistical analysis.',
-      'model':
-          'Store info is usually used to sync menu, inventory, etc., to third-party locations or to import to another device.',
-      'other': 'UNKNOWN',
-    });
-=======
     String _temp0 = intl.Intl.selectLogic(
       name,
       {
         'order': 'Export order info for detailed statistical analysis.',
-        'model': 'Store info is usually used to sync menu, inventory, etc., to third-party locations or to import to another device.',
+        'model':
+            'Store info is usually used to sync menu, inventory, etc., to third-party locations or to import to another device.',
         'other': 'UNKNOWN',
       },
     );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     return '$_temp0';
   }
 
   @override
   String transitModelName(String name) {
-<<<<<<< HEAD
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'menu': 'Menu',
-      'stock': 'Inventory',
-      'quantities': 'Quantities',
-      'replenisher': 'Replenisher',
-      'orderAttr': 'Customer Settings',
-      'order': 'Order',
-      'orderDetailsAttr': 'Order Customer Settings',
-      'orderDetailsProduct': 'Order Product Details',
-      'orderDetailsIngredient': 'Order Ingredient Details',
-      'other': 'UNKNOWN',
-    });
-=======
     String _temp0 = intl.Intl.selectLogic(
       name,
       {
@@ -856,7 +646,6 @@ class AppLocalizationsEn extends AppLocalizations {
         'other': 'UNKNOWN',
       },
     );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     return '$_temp0';
   }
 
@@ -876,12 +665,8 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-<<<<<<< HEAD
   String get transitOrderCapacityContent =>
       'High capacity may cause execution errors. It\'s recommended to perform in batches and not export too many records at once.';
-=======
-  String get transitOrderCapacityContent => 'High capacity may cause execution errors. It\'s recommended to perform in batches and not export too many records at once.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get transitOrderCapacityOk => 'Capacity Okay';
@@ -894,14 +679,8 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String transitOrderItemTitle(DateTime date) {
-<<<<<<< HEAD
-    final intl.DateFormat dateDateFormat = intl.DateFormat(
-      'MMM d HH:mm:ss',
-      localeName,
-    );
-=======
-    final intl.DateFormat dateDateFormat = intl.DateFormat('MMM d HH:mm:ss', localeName);
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
+    final intl.DateFormat dateDateFormat =
+        intl.DateFormat('MMM d HH:mm:ss', localeName);
     final String dateString = dateDateFormat.format(date);
 
     return '$dateString';
@@ -936,7 +715,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get transitImportPreviewTitle => 'Preview Import Result';
 
   @override
-<<<<<<< HEAD
   String get transitImportPreviewHeader =>
       'Note: Importing will remove the data not listed below. Please confirm before executing!';
 
@@ -944,13 +722,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String transitImportPreviewIngredientMetaAmount(num amount) {
     final intl.NumberFormat amountNumberFormat =
         intl.NumberFormat.decimalPattern(localeName);
-=======
-  String get transitImportPreviewHeader => 'Note: Importing will remove the data not listed below. Please confirm before executing!';
-
-  @override
-  String transitImportPreviewIngredientMetaAmount(num amount) {
-    final intl.NumberFormat amountNumberFormat = intl.NumberFormat.decimalPattern(localeName);
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     final String amountString = amountNumberFormat.format(amount);
 
     return 'Amount: $amountString';
@@ -958,12 +729,8 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String transitImportPreviewIngredientMetaMaxAmount(int exist, num value) {
-<<<<<<< HEAD
     final intl.NumberFormat valueNumberFormat =
         intl.NumberFormat.decimalPattern(localeName);
-=======
-    final intl.NumberFormat valueNumberFormat = intl.NumberFormat.decimalPattern(localeName);
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     final String valueString = valueNumberFormat.format(value);
 
     String _temp0 = intl.Intl.pluralLogic(
@@ -976,19 +743,12 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-<<<<<<< HEAD
   String get transitImportPreviewIngredientHeader =>
       'After import, old ingredients won\'t be removed to avoid affecting the \"Menu\" status.';
 
   @override
   String get transitImportPreviewQuantityHeader =>
       'After import, old quantities won\'t be removed to avoid affecting the \"Menu\" status.';
-=======
-  String get transitImportPreviewIngredientHeader => 'After import, old ingredients won\'t be removed to avoid affecting the \"Menu\" status.';
-
-  @override
-  String get transitImportPreviewQuantityHeader => 'After import, old quantities won\'t be removed to avoid affecting the \"Menu\" status.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get transitImportBtn => 'Import';
@@ -999,22 +759,8 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-<<<<<<< HEAD
   String get transitImportErrorDuplicate =>
       'This line will be ignored as the same item appeared earlier';
-
-  @override
-  String transitImportColumnStatus(String name) {
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'normal': '(Normal)',
-      'staged': '(New)',
-      'stagedIng': '(New Ingredient)',
-      'stagedQua': '(New Quantity)',
-      'updated': '(Updated)',
-      'other': 'UNKNOWN',
-    });
-=======
-  String get transitImportErrorDuplicate => 'This line will be ignored as the same item appeared earlier';
 
   @override
   String transitImportColumnStatus(String name) {
@@ -1029,17 +775,12 @@ class AppLocalizationsEn extends AppLocalizations {
         'other': 'UNKNOWN',
       },
     );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     return '$_temp0';
   }
 
   @override
-<<<<<<< HEAD
   String get transitGSDescription =>
       'Google Sheets is a powerful mini-database. After exporting, it can be customized for various analyses!';
-=======
-  String get transitGSDescription => 'Google Sheets is a powerful mini-database. After exporting, it can be customized for various analyses!';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String transitGSSheetNameLabel(String name) {
@@ -1078,45 +819,29 @@ class AppLocalizationsEn extends AppLocalizations {
   String get transitGSSpreadsheetImportAllBtn => 'Import All';
 
   @override
-<<<<<<< HEAD
   String get transitGSSpreadsheetImportAllHint =>
       'There will be no preview screen, directly overwrite all data.';
-=======
-  String get transitGSSpreadsheetImportAllHint => 'There will be no preview screen, directly overwrite all data.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get transitGSSpreadsheetImportAllConfirmTitle => 'Import All Data?';
 
   @override
-<<<<<<< HEAD
   String get transitGSSpreadsheetImportAllConfirmContent =>
       'All data from the selected sheets will be downloaded and completely overwrite local data.\nThis action cannot be undone.';
-=======
-  String get transitGSSpreadsheetImportAllConfirmContent => 'All data from the selected sheets will be downloaded and completely overwrite local data.\nThis action cannot be undone.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get transitGSSpreadsheetImportExistLabel => 'Load Sheets Name';
 
   @override
-<<<<<<< HEAD
   String get transitGSSpreadsheetImportExistHint =>
       'Get all sheet names from the spreadsheet and ready to import.';
-=======
-  String get transitGSSpreadsheetImportExistHint => 'Get all sheet names from the spreadsheet and ready to import.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get transitGSSpreadsheetImportEmptyLabel => 'Select Spreadsheet';
 
   @override
-<<<<<<< HEAD
   String get transitGSSpreadsheetImportEmptyHint =>
       'Once you choose the spreadsheet to import, you can start importing data.';
-=======
-  String get transitGSSpreadsheetImportEmptyHint => 'Once you choose the spreadsheet to import, you can start importing data.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get transitGSSpreadsheetImportDropdownHint => 'Select desired sheet';
@@ -1128,12 +853,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String transitGSSpreadsheetSelectionHint(String name) {
-<<<<<<< HEAD
-    String _temp0 = intl.Intl.selectLogic(name, {
-      '_': 'Enter the spreadsheet URL or spreadsheet ID',
-      'other': 'The current spreadsheet is \"$name\"',
-    });
-=======
     String _temp0 = intl.Intl.selectLogic(
       name,
       {
@@ -1141,7 +860,6 @@ class AppLocalizationsEn extends AppLocalizations {
         'other': 'The current spreadsheet is \"$name\"',
       },
     );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     return '$_temp0';
   }
 
@@ -1170,19 +888,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get transitGSProgressStatusVerifyUser => 'Verifying Identity';
 
   @override
-<<<<<<< HEAD
   String get transitGSProgressStatusFetchLocalOrders =>
       'Retrieving Local Data...';
 
   @override
   String get transitGSProgressStatusOverwriteOrders =>
       'Overwriting Order Data...';
-=======
-  String get transitGSProgressStatusFetchLocalOrders => 'Retrieving Local Data...';
-
-  @override
-  String get transitGSProgressStatusOverwriteOrders => 'Overwriting Order Data...';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String transitGSProgressStatusAppendOrders(String name) {
@@ -1191,20 +902,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String transitGSModelStatus(String model) {
-<<<<<<< HEAD
-    String _temp0 = intl.Intl.selectLogic(model, {
-      'menu': 'Updating Menu...',
-      'stock': 'Updating Inventory...',
-      'quantities': 'Updating Quantities...',
-      'replenisher': 'Updating Replenisher...',
-      'orderAttr': 'Exporting Customer Settings...',
-      'order': 'Exporting Orders...',
-      'orderDetailsAttr': 'Exporting Order Customer Settings...',
-      'orderDetailsProduct': 'Exporting Order Product Details...',
-      'orderDetailsIngredient': 'Exporting Order Ingredient Details...',
-      'other': 'UNKNOWN',
-    });
-=======
     String _temp0 = intl.Intl.selectLogic(
       model,
       {
@@ -1220,7 +917,6 @@ class AppLocalizationsEn extends AppLocalizations {
         'other': 'UNKNOWN',
       },
     );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     return '$_temp0';
   }
 
@@ -1228,23 +924,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get transitGSModelProductIngredientTitle => 'Ingredient Information';
 
   @override
-<<<<<<< HEAD
   String get transitGSModelProductIngredientNote =>
       'Information of all product ingredients, format as follows:\n- Ingredient 1, Default usage amount\n  + Quantity a, Additional usage amount, Additional price, Additional cost\n  + Quantity b, Additional usage amount, Additional price, Additional cost\n- Ingredient 2, Default usage amount';
-=======
-  String get transitGSModelProductIngredientNote => 'Information of all product ingredients, format as follows:\n- Ingredient 1, Default usage amount\n  + Quantity a, Additional usage amount, Additional price, Additional cost\n  + Quantity b, Additional usage amount, Additional price, Additional cost\n- Ingredient 2, Default usage amount';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get transitGSModelReplenishmentTitle => 'Replenishment Amount';
 
   @override
-<<<<<<< HEAD
   String get transitGSModelReplenishmentNote =>
       'The amount of specific ingredients during each replenishment, format as follows:\n- Ingredient 1, Replenishment amount\n- Ingredient 2, Replenishment amount';
-=======
-  String get transitGSModelReplenishmentNote => 'The amount of specific ingredients during each replenishment, format as follows:\n- Ingredient 1, Replenishment amount\n- Ingredient 2, Replenishment amount';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get transitGSModelAttributeOptionTitle => 'Customer Setting Options';
@@ -1259,12 +947,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get transitGSModelAttributeOptionHeaderOptions => 'Options';
 
   @override
-<<<<<<< HEAD
   String get transitGSModelAttributeOptionNote =>
       '\"Options\" will have different meanings depending on the type of customer settings, format as follows:\n- Option 1, Is default, Option value\n- Option 2, Is default, Option value';
-=======
-  String get transitGSModelAttributeOptionNote => '\"Options\" will have different meanings depending on the type of customer settings, format as follows:\n- Option 1, Is default, Option value\n- Option 2, Is default, Option value';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get transitGSOrderSettingTitle => 'Order Export Settings';
@@ -1273,48 +957,26 @@ class AppLocalizationsEn extends AppLocalizations {
   String get transitGSOrderSettingOverwriteLabel => 'Overwrite Sheet';
 
   @override
-<<<<<<< HEAD
   String get transitGSOrderSettingOverwriteHint =>
       'Overwriting the sheet will start exporting from the first row.';
-=======
-  String get transitGSOrderSettingOverwriteHint => 'Overwriting the sheet will start exporting from the first row.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get transitGSOrderSettingTitlePrefixLabel => 'Add Date Prefix';
 
   @override
-<<<<<<< HEAD
   String get transitGSOrderSettingTitlePrefixHint =>
       'Add a date prefix to the sheet name, for example, \"0101 - 0131 Order Data\".';
 
   @override
   String get transitGSOrderSettingRecommendCombination =>
       'When not overwriting and using append instead, it\'s recommended not to add a date prefix to the form name.';
-=======
-  String get transitGSOrderSettingTitlePrefixHint => 'Add a date prefix to the sheet name, for example, \"0101 - 0131 Order Data\".';
-
-  @override
-  String get transitGSOrderSettingRecommendCombination => 'When not overwriting and using append instead, it\'s recommended not to add a date prefix to the form name.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get transitGSOrderSettingNameLabel => 'Sheet Name';
 
   @override
-<<<<<<< HEAD
   String get transitGSOrderSettingNameHelper =>
       'Splitting the sheet allows for more flexible data analysis,\nfor example, you can query the total usage of a certain ingredient in order details.';
-
-  @override
-  String transitGSOrderMetaOverwrite(String value) {
-    String _temp0 = intl.Intl.selectLogic(value, {
-      'true': 'Will overwrite',
-      'false': 'Won\'t overwrite',
-      'other': 'UNKNOWN',
-    });
-=======
-  String get transitGSOrderSettingNameHelper => 'Splitting the sheet allows for more flexible data analysis,\nfor example, you can query the total usage of a certain ingredient in order details.';
 
   @override
   String transitGSOrderMetaOverwrite(String value) {
@@ -1326,19 +988,11 @@ class AppLocalizationsEn extends AppLocalizations {
         'other': 'UNKNOWN',
       },
     );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     return '$_temp0';
   }
 
   @override
   String transitGSOrderMetaTitlePrefix(String value) {
-<<<<<<< HEAD
-    String _temp0 = intl.Intl.selectLogic(value, {
-      'true': 'Has date prefix',
-      'false': 'No date prefix',
-      'other': 'UNKNOWN',
-    });
-=======
     String _temp0 = intl.Intl.selectLogic(
       value,
       {
@@ -1347,17 +1001,12 @@ class AppLocalizationsEn extends AppLocalizations {
         'other': 'UNKNOWN',
       },
     );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     return '$_temp0';
   }
 
   @override
-<<<<<<< HEAD
   String get transitGSOrderMetaMemoryWarning =>
       'The capacity here represents the amount consumed by network transmission, the actual cloud memory occupied may be only one percent of this value.\nFor detailed capacity limit explanations, please refer to [this document](https://developers.google.com/sheets/api/limits#quota).';
-=======
-  String get transitGSOrderMetaMemoryWarning => 'The capacity here represents the amount consumed by network transmission, the actual cloud memory occupied may be only one percent of this value.\nFor detailed capacity limit explanations, please refer to [this document](https://developers.google.com/sheets/api/limits#quota).';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get transitGSOrderHeaderTs => 'Timestamp';
@@ -1444,25 +1093,17 @@ class AppLocalizationsEn extends AppLocalizations {
   String get transitGSErrorCreateSpreadsheet => 'Unable to Create Spreadsheet';
 
   @override
-<<<<<<< HEAD
   String get transitGSErrorCreateSpreadsheetHelper =>
       'Don\'t worry, it\'s usually easy to solve!\nPossible reasons include:\n• Unstable network conditions;\n• POS system not authorized to edit spreadsheets.';
 
   @override
   String get transitGSErrorSpreadsheetEmpty =>
       'Please Select a Spreadsheet First';
-=======
-  String get transitGSErrorCreateSpreadsheetHelper => 'Don\'t worry, it\'s usually easy to solve!\nPossible reasons include:\n• Unstable network conditions;\n• POS system not authorized to edit spreadsheets.';
-
-  @override
-  String get transitGSErrorSpreadsheetEmpty => 'Please Select a Spreadsheet First';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get transitGSErrorSpreadsheetIdEmpty => 'Cannot be Empty';
 
   @override
-<<<<<<< HEAD
   String get transitGSErrorSpreadsheetIdInvalid =>
       'Invalid text. It must include:\n• /spreadsheets/d/<ID>/\n• Or provide the ID directly (combination of letters, numbers, underscores, and hyphens).';
 
@@ -1473,21 +1114,11 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get transitGSErrorCreateSheetHelper =>
       'Don\'t worry, it\'s usually easy to solve!\nPossible reasons include:\n• Unstable network conditions;\n• POS system not authorized to create sheets;\n• Misspelled spreadsheet ID, try copying the entire URL and pasting it;\n• The spreadsheet has been deleted.';
-=======
-  String get transitGSErrorSpreadsheetIdInvalid => 'Invalid text. It must include:\n• /spreadsheets/d/<ID>/\n• Or provide the ID directly (combination of letters, numbers, underscores, and hyphens).';
-
-  @override
-  String get transitGSErrorCreateSheet => 'Unable to Create Sheet in Spreadsheet';
-
-  @override
-  String get transitGSErrorCreateSheetHelper => 'Don\'t worry, it\'s usually easy to solve!\nPossible reasons include:\n• Unstable network conditions;\n• POS system not authorized to create sheets;\n• Misspelled spreadsheet ID, try copying the entire URL and pasting it;\n• The spreadsheet has been deleted.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get transitGSErrorSheetRepeat => 'Sheet name duplicate';
 
   @override
-<<<<<<< HEAD
   String get transitGSErrorSheetEmpty =>
       'Please select at least one sheet to export';
 
@@ -1502,18 +1133,6 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get transitGSErrorImportEmptySheet =>
       'Must select a specific sheet to import';
-=======
-  String get transitGSErrorSheetEmpty => 'Please select at least one sheet to export';
-
-  @override
-  String get transitGSErrorNonExistName => 'Spreadsheet not found, has it been deleted?';
-
-  @override
-  String get transitGSErrorImportEmptySpreadsheet => 'Must select a spreadsheet to import';
-
-  @override
-  String get transitGSErrorImportEmptySheet => 'Must select a specific sheet to import';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get transitGSErrorImportEmptyData => 'No values found in sheet';
@@ -1527,12 +1146,8 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-<<<<<<< HEAD
   String get transitGSErrorImportNotFoundHelper =>
       'Don\'t worry, it\'s usually easy to solve!\nPossible reasons include:\n• Unstable network conditions;\n• POS system not authorized to read sheets;\n• Misspelled spreadsheet ID, try copying the entire URL and pasting it;\n• The spreadsheet has been deleted.';
-=======
-  String get transitGSErrorImportNotFoundHelper => 'Don\'t worry, it\'s usually easy to solve!\nPossible reasons include:\n• Unstable network conditions;\n• POS system not authorized to read sheets;\n• Misspelled spreadsheet ID, try copying the entire URL and pasting it;\n• The spreadsheet has been deleted.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get transitPTDescription => 'Quick check, quick share.';
@@ -1544,18 +1159,13 @@ class AppLocalizationsEn extends AppLocalizations {
   String get transitPTCopySuccess => 'Copied successfully';
 
   @override
-<<<<<<< HEAD
   String get transitPTCopyWarning =>
       'Copying too much text may cause system crash';
-=======
-  String get transitPTCopyWarning => 'Copying too much text may cause system crash';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get transitPTImportHint => 'Paste copied text here';
 
   @override
-<<<<<<< HEAD
   String get transitPTImportHelper =>
       'After pasting the text, it will analyze and determine the type of information to import.';
 
@@ -1565,19 +1175,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String transitPTFormatOrderPrice(
-    int hasProducts,
-    String price,
-    String productsPrice,
-  ) {
-=======
-  String get transitPTImportHelper => 'After pasting the text, it will analyze and determine the type of information to import.';
-
-  @override
-  String get transitPTImportErrorNotFound => 'This text cannot match any corresponding service. Please refer to the exported text content.';
-
-  @override
-  String transitPTFormatOrderPrice(int hasProducts, String price, String productsPrice) {
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
+      int hasProducts, String price, String productsPrice) {
     String _temp0 = intl.Intl.pluralLogic(
       hasProducts,
       locale: localeName,
@@ -1593,24 +1191,13 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-<<<<<<< HEAD
   String transitPTFormatOrderProductCount(
-    int count,
-    int setCount,
-    String products,
-  ) {
+      int count, int setCount, String products) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
       other:
           'There are $count products ($setCount types of set) including:\n$products.',
-=======
-  String transitPTFormatOrderProductCount(int count, int setCount, String products) {
-    String _temp0 = intl.Intl.pluralLogic(
-      count,
-      locale: localeName,
-      other: 'There are $count products ($setCount types of set) including:\n$products.',
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
       one: 'There is 1 product details are:\n$products.',
       zero: 'There is no product.',
     );
@@ -1618,15 +1205,8 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-<<<<<<< HEAD
-  String transitPTFormatOrderProduct(
-    int hasIngredient,
-    String product,
-    String catalog,
-    int count,
-    String price,
-    String ingredients,
-  ) {
+  String transitPTFormatOrderProduct(int hasIngredient, String product,
+      String catalog, int count, String price, String ingredients) {
     String _temp0 = intl.Intl.pluralLogic(
       hasIngredient,
       locale: localeName,
@@ -1634,31 +1214,15 @@ class AppLocalizationsEn extends AppLocalizations {
           '$count of $product ($catalog), total price is \$$price, ingredients are $ingredients',
       zero:
           '$count of $product ($catalog), total price is \$$price, no ingredient settings',
-=======
-  String transitPTFormatOrderProduct(int hasIngredient, String product, String catalog, int count, String price, String ingredients) {
-    String _temp0 = intl.Intl.pluralLogic(
-      hasIngredient,
-      locale: localeName,
-      other: '$count of $product ($catalog), total price is \$$price, ingredients are $ingredients',
-      zero: '$count of $product ($catalog), total price is \$$price, no ingredient settings',
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     );
     return '$_temp0';
   }
 
   @override
-<<<<<<< HEAD
   String transitPTFormatOrderIngredient(
-    num amount,
-    String ingredient,
-    String quantity,
-  ) {
+      num amount, String ingredient, String quantity) {
     final intl.NumberFormat amountNumberFormat =
         intl.NumberFormat.decimalPattern(localeName);
-=======
-  String transitPTFormatOrderIngredient(num amount, String ingredient, String quantity) {
-    final intl.NumberFormat amountNumberFormat = intl.NumberFormat.decimalPattern(localeName);
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     final String amountString = amountNumberFormat.format(amount);
 
     String _temp0 = intl.Intl.pluralLogic(
@@ -1702,15 +1266,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get transitPTFormatModelMenuHeaderPrefix => 'This menu has';
 
   @override
-<<<<<<< HEAD
   String transitPTFormatModelMenuCatalog(
-    String index,
-    String catalog,
-    String details,
-  ) {
-=======
-  String transitPTFormatModelMenuCatalog(String index, String catalog, String details) {
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
+      String index, String catalog, String details) {
     return 'Category $index is called $catalog and $details.';
   }
 
@@ -1727,39 +1284,19 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-<<<<<<< HEAD
   String transitPTFormatModelMenuProduct(
-    String index,
-    String name,
-    String price,
-    String cost,
-    String details,
-  ) {
-=======
-  String transitPTFormatModelMenuProduct(String index, String name, String price, String cost, String details) {
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
+      String index, String name, String price, String cost, String details) {
     return 'Product $index is called $name, with price at \$$price, cost \$$cost and $details';
   }
 
   @override
-<<<<<<< HEAD
   String transitPTFormatModelMenuProductDetails(
-    int count,
-    String names,
-    String details,
-  ) {
+      int count, String names, String details) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
       other:
           'it has $count ingredients: $names.\nEach product requires $details.',
-=======
-  String transitPTFormatModelMenuProductDetails(int count, String names, String details) {
-    String _temp0 = intl.Intl.pluralLogic(
-      count,
-      locale: localeName,
-      other: 'it has $count ingredients: $names.\nEach product requires $details.',
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
       one: 'it has one ingredient: $names.\nEach product requires $details.',
       zero: 'it has no ingredient.',
     );
@@ -1767,27 +1304,14 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-<<<<<<< HEAD
   String transitPTFormatModelMenuIngredient(
-    String amount,
-    String name,
-    String details,
-  ) {
-=======
-  String transitPTFormatModelMenuIngredient(String amount, String name, String details) {
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
+      String amount, String name, String details) {
     return '$amount of $name and $details';
   }
 
   @override
-<<<<<<< HEAD
   String transitPTFormatModelMenuIngredientDetails(
-    int count,
-    String quantities,
-  ) {
-=======
-  String transitPTFormatModelMenuIngredientDetails(int count, String quantities) {
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
+      int count, String quantities) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
@@ -1799,15 +1323,8 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-<<<<<<< HEAD
   String transitPTFormatModelMenuQuantity(
-    String amount,
-    String price,
-    String cost,
-  ) {
-=======
-  String transitPTFormatModelMenuQuantity(String amount, String price, String cost) {
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
+      String amount, String price, String cost) {
     return 'quantity $amount with additional price \$$price and cost \$$cost';
   }
 
@@ -1825,16 +1342,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get transitPTFormatModelStockHeaderPrefix => 'The inventory has';
 
   @override
-<<<<<<< HEAD
   String transitPTFormatModelStockIngredient(
-    String index,
-    String name,
-    String amount,
-    String details,
-  ) {
-=======
-  String transitPTFormatModelStockIngredient(String index, String name, String amount, String details) {
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
+      String index, String name, String amount, String details) {
     return 'Ingredient at $index is called $name, with $amount amount$details.';
   }
 
@@ -1850,15 +1359,8 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-<<<<<<< HEAD
   String transitPTFormatModelStockIngredientRestockPrice(
-    int exist,
-    String quantity,
-    String price,
-  ) {
-=======
-  String transitPTFormatModelStockIngredientRestockPrice(int exist, String quantity, String price) {
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
+      int exist, String quantity, String price) {
     String _temp0 = intl.Intl.pluralLogic(
       exist,
       locale: localeName,
@@ -1879,22 +1381,12 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-<<<<<<< HEAD
   String get transitPTFormatModelQuantitiesHeaderSuffix =>
       'quantities have been set.';
 
   @override
   String transitPTFormatModelQuantitiesQuantity(
-    String index,
-    String name,
-    String prop,
-  ) {
-=======
-  String get transitPTFormatModelQuantitiesHeaderSuffix => 'quantities have been set.';
-
-  @override
-  String transitPTFormatModelQuantitiesQuantity(String index, String name, String prop) {
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
+      String index, String name, String prop) {
     return 'Quantity at $index is called $name, which defaults to multiplying ingredient quantity by $prop.';
   }
 
@@ -1909,22 +1401,12 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-<<<<<<< HEAD
   String get transitPTFormatModelReplenisherHeaderSuffix =>
       'replenishment methods have been set.';
 
   @override
   String transitPTFormatModelReplenisherReplenishment(
-    String index,
-    String name,
-    String details,
-  ) {
-=======
-  String get transitPTFormatModelReplenisherHeaderSuffix => 'replenishment methods have been set.';
-
-  @override
-  String transitPTFormatModelReplenisherReplenishment(String index, String name, String details) {
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
+      String index, String name, String details) {
     return 'Replenishment method at $index is called $name, $details.';
   }
 
@@ -1950,23 +1432,12 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-<<<<<<< HEAD
   String get transitPTFormatModelOaHeaderSuffix =>
       'customer attributes have been set.';
 
   @override
   String transitPTFormatModelOaOa(
-    String index,
-    String name,
-    String mode,
-    String details,
-  ) {
-=======
-  String get transitPTFormatModelOaHeaderSuffix => 'customer attributes have been set.';
-
-  @override
-  String transitPTFormatModelOaOa(String index, String name, String mode, String details) {
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
+      String index, String name, String mode, String details) {
     return 'Attribute at $index is called $name, belongs to $mode type, $details.';
   }
 
@@ -1987,12 +1458,8 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String transitPTFormatModelOaModeValue(num value) {
-<<<<<<< HEAD
     final intl.NumberFormat valueNumberFormat =
         intl.NumberFormat.decimalPattern(localeName);
-=======
-    final intl.NumberFormat valueNumberFormat = intl.NumberFormat.decimalPattern(localeName);
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     final String valueString = valueNumberFormat.format(value);
 
     return 'option value is $valueString';
@@ -2020,10 +1487,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String totalCount(int count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compactLong(
       locale: localeName,
-<<<<<<< HEAD
-=======
-      
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     );
     final String countString = countNumberFormat.format(count);
 
@@ -2041,10 +1504,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String searchCount(int count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-<<<<<<< HEAD
-=======
-      
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     );
     final String countString = countNumberFormat.format(count);
 
@@ -2053,23 +1512,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String title(String name) {
-<<<<<<< HEAD
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'analysis': 'Stats',
-      'stock': 'Inventory',
-      'cashier': 'Cashier',
-      'settings': 'Settings',
-      'menu': 'Menu',
-      'printers': 'Printer',
-      'transit': 'Data Transfer',
-      'orderAttributes': 'Customer Settings',
-      'stockQuantities': 'Quantities',
-      'elf': 'Suggestions',
-      'more': 'More',
-      'debug': 'Debug',
-      'other': 'UNKNOWN',
-    });
-=======
     String _temp0 = intl.Intl.selectLogic(
       name,
       {
@@ -2088,7 +1530,6 @@ class AppLocalizationsEn extends AppLocalizations {
         'other': 'UNKNOWN',
       },
     );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     return '$_temp0';
   }
 
@@ -2122,12 +1563,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get imageGalleryActionDelete => 'Delete';
 
   @override
-<<<<<<< HEAD
   String get imageGallerySnackbarDeleteFailed =>
       'One or more images failed to delete.';
-=======
-  String get imageGallerySnackbarDeleteFailed => 'One or more images failed to delete.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get imageGallerySelectionTitle => 'Select Images';
@@ -2136,10 +1573,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String imageGallerySelectionDeleteConfirm(int count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-<<<<<<< HEAD
-=======
-      
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     );
     final String countString = countNumberFormat.format(count);
 
@@ -2160,12 +1593,8 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String semanticsPercentileBar(num percent) {
-<<<<<<< HEAD
     final intl.NumberFormat percentNumberFormat =
         intl.NumberFormat.percentPattern(localeName);
-=======
-    final intl.NumberFormat percentNumberFormat = intl.NumberFormat.percentPattern(localeName);
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     final String percentString = percentNumberFormat.format(percent);
 
     return 'Currently $percentString of total';
@@ -2188,12 +1617,8 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String invalidNumberMaximum(String field, num maximum) {
-<<<<<<< HEAD
     final intl.NumberFormat maximumNumberFormat =
         intl.NumberFormat.decimalPattern(localeName);
-=======
-    final intl.NumberFormat maximumNumberFormat = intl.NumberFormat.decimalPattern(localeName);
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     final String maximumString = maximumNumberFormat.format(maximum);
 
     return '$field cannot exceed $maximumString.';
@@ -2201,12 +1626,8 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String invalidNumberMinimum(String field, num minimum) {
-<<<<<<< HEAD
     final intl.NumberFormat minimumNumberFormat =
         intl.NumberFormat.decimalPattern(localeName);
-=======
-    final intl.NumberFormat minimumNumberFormat = intl.NumberFormat.decimalPattern(localeName);
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     final String minimumString = minimumNumberFormat.format(minimum);
 
     return '$field cannot be less than $minimumString.';
@@ -2235,12 +1656,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get orderAttributeTitle => 'Customer Settings';
 
   @override
-<<<<<<< HEAD
   String get orderAttributeDescription =>
       'Information for analysis such as dine-in, takeout, etc.';
-=======
-  String get orderAttributeDescription => 'Information for analysis such as dine-in, takeout, etc.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get orderAttributeTitleCreate => 'Add Customer Setting';
@@ -2252,12 +1669,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get orderAttributeTitleReorder => 'Reorder Customer Settings';
 
   @override
-<<<<<<< HEAD
   String get orderAttributeEmptyBody =>
       'Customer settings help us track who comes to consume, such as:\n20-30 years old, takeout, office workers, etc.';
-=======
-  String get orderAttributeEmptyBody => 'Customer settings help us track who comes to consume, such as:\n20-30 years old, takeout, office workers, etc.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get orderAttributeHeaderInfo => 'Customer Settings';
@@ -2266,19 +1679,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get orderAttributeTutorialTitle => 'Create Your Customer Settings';
 
   @override
-<<<<<<< HEAD
   String get orderAttributeTutorialContent =>
       'This is where you set customer information, such as dine-in, takeout, office worker, etc.\nThis information helps us track who comes to consume and make better business strategies.';
 
   @override
   String get orderAttributeTutorialCreateExample =>
       'Help create an example to test.';
-=======
-  String get orderAttributeTutorialContent => 'This is where you set customer information, such as dine-in, takeout, office worker, etc.\nThis information helps us track who comes to consume and make better business strategies.';
-
-  @override
-  String get orderAttributeTutorialCreateExample => 'Help create an example to test.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get orderAttributeExampleAge => 'Age';
@@ -2305,12 +1711,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get orderAttributeExampleEcoFriendly => 'Eco-Friendly';
 
   @override
-<<<<<<< HEAD
   String get orderAttributeExampleEcoFriendlyReusableBottle =>
       'Reusable Bottle';
-=======
-  String get orderAttributeExampleEcoFriendlyReusableBottle => 'Reusable Bottle';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get orderAttributeExampleEcoFriendlyReusableBag => 'Reusable Bag';
@@ -2333,14 +1735,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String orderAttributeModeName(String name) {
-<<<<<<< HEAD
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'statOnly': 'Normal',
-      'changePrice': 'Price Change',
-      'changeDiscount': 'Discount',
-      'other': 'UNKNOWN',
-    });
-=======
     String _temp0 = intl.Intl.selectLogic(
       name,
       {
@@ -2350,32 +1744,22 @@ class AppLocalizationsEn extends AppLocalizations {
         'other': 'UNKNOWN',
       },
     );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     return '$_temp0';
   }
 
   @override
   String orderAttributeModeHelper(String name) {
-<<<<<<< HEAD
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'statOnly': 'Normal setting, selecting won\'t affect the order price.',
-      'changePrice':
-          'Selecting this setting may affect the order price.\nFor example: Takeout +\$30, Eco Cup -\$5.',
-      'changeDiscount':
-          'Selecting this setting will affect the total price based on the discount.\nFor example: Dine-in +10% service charge, Friends & Family Discount -10%.',
-      'other': 'UNKNOWN',
-    });
-=======
     String _temp0 = intl.Intl.selectLogic(
       name,
       {
         'statOnly': 'Normal setting, selecting won\'t affect the order price.',
-        'changePrice': 'Selecting this setting may affect the order price.\nFor example: Takeout +\$30, Eco Cup -\$5.',
-        'changeDiscount': 'Selecting this setting will affect the total price based on the discount.\nFor example: Dine-in +10% service charge, Friends & Family Discount -10%.',
+        'changePrice':
+            'Selecting this setting may affect the order price.\nFor example: Takeout +\$30, Eco Cup -\$5.',
+        'changeDiscount':
+            'Selecting this setting will affect the total price based on the discount.\nFor example: Dine-in +10% service charge, Friends & Family Discount -10%.',
         'other': 'UNKNOWN',
       },
     );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     return '$_temp0';
   }
 
@@ -2409,12 +1793,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get orderAttributeOptionNameLabel => 'Option Name';
 
   @override
-<<<<<<< HEAD
   String get orderAttributeOptionNameHelper =>
       'For \'age\', possible options are:\n- ⇣ 20\n- 20 ⇢ 30';
-=======
-  String get orderAttributeOptionNameHelper => 'For \'age\', possible options are:\n- ⇣ 20\n- 20 ⇢ 30';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get orderAttributeOptionNameErrorRepeat => 'Name already exists';
@@ -2424,40 +1804,23 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String orderAttributeOptionModeHelper(String name) {
-<<<<<<< HEAD
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'statOnly':
-          'No need to set \"Discount\" or \"Price Change\" because this setting is \"Normal\"',
-      'changePrice':
-          'Selecting this option during ordering will apply this price change',
-      'changeDiscount':
-          'Selecting this option during ordering will apply this discount',
-      'other': 'UNKNOWN',
-    });
-=======
     String _temp0 = intl.Intl.selectLogic(
       name,
       {
-        'statOnly': 'No need to set \"Discount\" or \"Price Change\" because this setting is \"Normal\"',
-        'changePrice': 'Selecting this option during ordering will apply this price change',
-        'changeDiscount': 'Selecting this option during ordering will apply this discount',
+        'statOnly':
+            'No need to set \"Discount\" or \"Price Change\" because this setting is \"Normal\"',
+        'changePrice':
+            'Selecting this option during ordering will apply this price change',
+        'changeDiscount':
+            'Selecting this option during ordering will apply this discount',
         'other': 'UNKNOWN',
       },
     );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     return '$_temp0';
   }
 
   @override
   String orderAttributeOptionModeHint(String name) {
-<<<<<<< HEAD
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'statOnly': '',
-      'changePrice': 'For example: -30 means decrease by thirty dollars',
-      'changeDiscount': 'For example: 80 means \"20% off\"',
-      'other': 'UNKNOWN',
-    });
-=======
     String _temp0 = intl.Intl.selectLogic(
       name,
       {
@@ -2467,7 +1830,6 @@ class AppLocalizationsEn extends AppLocalizations {
         'other': 'UNKNOWN',
       },
     );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     return '$_temp0';
   }
 
@@ -2475,19 +1837,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get orderAttributeOptionToDefaultLabel => 'Set as Default';
 
   @override
-<<<<<<< HEAD
   String get orderAttributeOptionToDefaultHelper =>
       'Set this option as the default value, which will be used for each order by default.';
 
   @override
   String get orderAttributeOptionToDefaultConfirmChangeTitle =>
       'Override Option Default?';
-=======
-  String get orderAttributeOptionToDefaultHelper => 'Set this option as the default value, which will be used for each order by default.';
-
-  @override
-  String get orderAttributeOptionToDefaultConfirmChangeTitle => 'Override Option Default?';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String orderAttributeOptionToDefaultConfirmChangeContent(String name) {
@@ -2513,23 +1868,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get menuTutorialContent => 'Let\'s start by creating a menu!';
 
   @override
-<<<<<<< HEAD
   String get menuTutorialCreateExample =>
       'Help create an example menu to test.';
-=======
-  String get menuTutorialCreateExample => 'Help create an example menu to test.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get menuSearchHint => 'Search for products, ingredients, quantities';
 
   @override
-<<<<<<< HEAD
   String get menuSearchNotFound =>
       'Couldn\'t find relevant information. Did you misspell something?';
-=======
-  String get menuSearchNotFound => 'Couldn\'t find relevant information. Did you misspell something?';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get menuExampleCatalogBurger => 'Burgers';
@@ -2610,12 +1957,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get menuExampleQuantityNone => 'None';
 
   @override
-<<<<<<< HEAD
   String get menuCatalogEmptyBody =>
       'Similar products will be grouped under categories,\nmaking ordering convenient, such as:\n• \"Cheese Burger\", \"Veggie Burger\" > \"Burgers\"\n• \"Plastic Bag\", \"Eco Cup\" > \"Others\"';
-=======
-  String get menuCatalogEmptyBody => 'Similar products will be grouped under categories,\nmaking ordering convenient, such as:\n• \"Cheese Burger\", \"Veggie Burger\" > \"Burgers\"\n• \"Plastic Bag\", \"Eco Cup\" > \"Others\"';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get menuCatalogTitleCreate => 'Add Category';
@@ -2645,12 +1988,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get menuCatalogNameHint => 'e.g., Burgers';
 
   @override
-<<<<<<< HEAD
   String get menuCatalogNameErrorRepeat =>
       'Name already exists. Please choose a different name!';
-=======
-  String get menuCatalogNameErrorRepeat => 'Name already exists. Please choose a different name!';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get menuCatalogEmptyProducts => 'No products set yet';
@@ -2659,12 +1998,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get menuProductHeaderInfo => 'Products';
 
   @override
-<<<<<<< HEAD
   String get menuProductEmptyBody =>
       '\"Products\" are the basic units in the menu, such as:\n\"Cheese Burger\", \"Cola\"';
-=======
-  String get menuProductEmptyBody => '\"Products\" are the basic units in the menu, such as:\n\"Cheese Burger\", \"Cola\"';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get menuProductNotSelected => 'Please select a category first';
@@ -2688,10 +2023,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String menuProductMetaPrice(num price) {
     final intl.NumberFormat priceNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-<<<<<<< HEAD
-=======
-      
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     );
     final String priceString = priceNumberFormat.format(price);
 
@@ -2702,10 +2033,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String menuProductMetaCost(num cost) {
     final intl.NumberFormat costNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-<<<<<<< HEAD
-=======
-      
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     );
     final String costString = costNumberFormat.format(cost);
 
@@ -2734,23 +2061,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get menuProductCostLabel => 'Product Cost';
 
   @override
-<<<<<<< HEAD
   String get menuProductCostHelper =>
       'Used to calculate profit, should be less than the price';
-=======
-  String get menuProductCostHelper => 'Used to calculate profit, should be less than the price';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get menuProductEmptyIngredients => 'No ingredients set yet';
 
   @override
-<<<<<<< HEAD
   String get menuIngredientEmptyBody =>
       'You can set ingredients for the product, such as:\n\"Cheeseburger\" with \"Cheese\", \"Bun\" as ingredients';
-=======
-  String get menuIngredientEmptyBody => 'You can set ingredients for the product, such as:\n\"Cheeseburger\" with \"Cheese\", \"Bun\" as ingredients';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get menuIngredientTitleCreate => 'Add Ingredient';
@@ -2763,12 +2082,8 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String menuIngredientMetaAmount(num amount) {
-<<<<<<< HEAD
     final intl.NumberFormat amountNumberFormat =
         intl.NumberFormat.decimalPattern(localeName);
-=======
-    final intl.NumberFormat amountNumberFormat = intl.NumberFormat.decimalPattern(localeName);
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     final String amountString = amountNumberFormat.format(amount);
 
     return 'Amount: $amountString';
@@ -2778,12 +2093,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get menuIngredientSearchLabel => 'Search Ingredients';
 
   @override
-<<<<<<< HEAD
   String get menuIngredientSearchHelper =>
       'After adding ingredient, you can set related information in \"Inventory\".';
-=======
-  String get menuIngredientSearchHelper => 'After adding ingredient, you can set related information in \"Inventory\".';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get menuIngredientSearchHint => 'e.g., Cheese';
@@ -2794,30 +2105,19 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-<<<<<<< HEAD
   String get menuIngredientSearchErrorEmpty =>
       'Ingredient must be set, please click to set.';
 
   @override
   String get menuIngredientSearchErrorRepeat =>
       'Product already has the same ingredient, cannot select repeatedly.';
-=======
-  String get menuIngredientSearchErrorEmpty => 'Ingredient must be set, please click to set.';
-
-  @override
-  String get menuIngredientSearchErrorRepeat => 'Product already has the same ingredient, cannot select repeatedly.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get menuIngredientAmountLabel => 'Amount Used';
 
   @override
-<<<<<<< HEAD
   String get menuIngredientAmountHelper =>
       'Default amount used.\nIf customers are able to adjust the amount,\nset different quantities in \"Quantity.\"';
-=======
-  String get menuIngredientAmountHelper => 'Default amount used.\nIf customers are able to adjust the amount,\nset different quantities in \"Quantity.\"';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get menuQuantityTitleCreate => 'Add Quantity';
@@ -2827,12 +2127,8 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String menuQuantityMetaAmount(num amount) {
-<<<<<<< HEAD
     final intl.NumberFormat amountNumberFormat =
         intl.NumberFormat.decimalPattern(localeName);
-=======
-    final intl.NumberFormat amountNumberFormat = intl.NumberFormat.decimalPattern(localeName);
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     final String amountString = amountNumberFormat.format(amount);
 
     return 'Amount: $amountString';
@@ -2852,12 +2148,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get menuQuantitySearchLabel => 'Search Quantity';
 
   @override
-<<<<<<< HEAD
   String get menuQuantitySearchHelper =>
       'After adding ingredient quantity, you can set related information in \"Quantity\".';
-=======
-  String get menuQuantitySearchHelper => 'After adding ingredient quantity, you can set related information in \"Quantity\".';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get menuQuantitySearchHint => 'e.g., Large, Small';
@@ -2868,19 +2160,12 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-<<<<<<< HEAD
   String get menuQuantitySearchErrorEmpty =>
       'Quantity must be set, please click to set.';
 
   @override
   String get menuQuantitySearchErrorRepeat =>
       'Product already has the same quantity, cannot select repeatedly.';
-=======
-  String get menuQuantitySearchErrorEmpty => 'Quantity must be set, please click to set.';
-
-  @override
-  String get menuQuantitySearchErrorRepeat => 'Product already has the same quantity, cannot select repeatedly.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get menuQuantityAmountLabel => 'Amount Used';
@@ -2889,23 +2174,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get menuQuantityAdditionalPriceLabel => 'Additional Price';
 
   @override
-<<<<<<< HEAD
   String get menuQuantityAdditionalPriceHelper =>
       'Set to 0 to indicate no additional charge for extra (or less) quantity.';
-=======
-  String get menuQuantityAdditionalPriceHelper => 'Set to 0 to indicate no additional charge for extra (or less) quantity.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get menuQuantityAdditionalCostLabel => 'Additional Cost';
 
   @override
-<<<<<<< HEAD
   String get menuQuantityAdditionalCostHelper =>
       'Additional cost can be negative, e.g., \"Less\" reduces ingredient usage, reducing cost accordingly.';
-=======
-  String get menuQuantityAdditionalCostHelper => 'Additional cost can be negative, e.g., \"Less\" reduces ingredient usage, reducing cost accordingly.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get cashierTab => 'Cashier';
@@ -2925,23 +2202,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get cashierToDefaultTutorialTitle => 'Cash Register Default Status';
 
   @override
-<<<<<<< HEAD
   String get cashierToDefaultTutorialContent =>
       'After setting the quantities of various currencies below,\nclick here to set the default status!\nThe set quantities will be the \"maximum\" for each currency status bar.';
-=======
-  String get cashierToDefaultTutorialContent => 'After setting the quantities of various currencies below,\nclick here to set the default status!\nThe set quantities will be the \"maximum\" for each currency status bar.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get cashierToDefaultDialogTitle => 'Adjust Cash Register Default?';
 
   @override
-<<<<<<< HEAD
   String get cashierToDefaultDialogContent =>
       'This will set the current cash register status as the default status.\nThis action will override previous settings.';
-=======
-  String get cashierToDefaultDialogContent => 'This will set the current cash register status as the default status.\nThis action will override previous settings.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get cashierChangerTitle => 'Changer';
@@ -2953,19 +2222,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get cashierChangerTutorialTitle => 'Cash Register Money Changer';
 
   @override
-<<<<<<< HEAD
   String get cashierChangerTutorialContent =>
       'Exchange one hundred for 10 tens, for example.\nHelps to quickly adjust the cash register status.';
 
   @override
   String get cashierChangerErrorNoSelection =>
       'Please select a combination to apply';
-=======
-  String get cashierChangerTutorialContent => 'Exchange one hundred for 10 tens, for example.\nHelps to quickly adjust the cash register status.';
-
-  @override
-  String get cashierChangerErrorNoSelection => 'Please select a combination to apply';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String cashierChangerErrorNotEnough(String unit) {
@@ -2986,19 +2248,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get cashierChangerFavoriteTab => 'Favorites';
 
   @override
-<<<<<<< HEAD
   String get cashierChangerFavoriteHint =>
       'After selecting, please click \"Apply\" to use the combination.';
 
   @override
   String get cashierChangerFavoriteEmptyBody =>
       'Here can help you quickly convert different currencies.';
-=======
-  String get cashierChangerFavoriteHint => 'After selecting, please click \"Apply\" to use the combination.';
-
-  @override
-  String get cashierChangerFavoriteEmptyBody => 'Here can help you quickly convert different currencies.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String cashierChangerFavoriteItemFrom(int count, String unit) {
@@ -3041,32 +2296,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get cashierSurplusTutorialTitle => 'Daily Surplus';
 
   @override
-<<<<<<< HEAD
   String get cashierSurplusTutorialContent =>
       'Surplus helps us at the end of each day,\ncalculate the difference between the current amount and the default amount.';
-=======
-  String get cashierSurplusTutorialContent => 'Surplus helps us at the end of each day,\ncalculate the difference between the current amount and the default amount.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get cashierSurplusErrorEmptyDefault => 'Default status not set yet';
 
   @override
-<<<<<<< HEAD
   String get cashierSurplusTableHint =>
       'Once you confirm that there are no issues with the cash register money, you can complete the surplus!';
-
-  @override
-  String cashierSurplusColumnName(String name) {
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'unit': 'Unit',
-      'currentCount': 'Current',
-      'diffCount': 'Difference',
-      'defaultCount': 'Default',
-      'other': 'UNKNOWN',
-    });
-=======
-  String get cashierSurplusTableHint => 'Once you confirm that there are no issues with the cash register money, you can complete the surplus!';
 
   @override
   String cashierSurplusColumnName(String name) {
@@ -3080,7 +2318,6 @@ class AppLocalizationsEn extends AppLocalizations {
         'other': 'UNKNOWN',
       },
     );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     return '$_temp0';
   }
 
@@ -3096,23 +2333,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get cashierSurplusCurrentTotalLabel => 'Current Total';
 
   @override
-<<<<<<< HEAD
   String get cashierSurplusCurrentTotalHelper =>
       'The total amount the cash register should have now.\nIf you find that the cash and this value don\'t match, think about whether you used the cash register to buy something today?';
-=======
-  String get cashierSurplusCurrentTotalHelper => 'The total amount the cash register should have now.\nIf you find that the cash and this value don\'t match, think about whether you used the cash register to buy something today?';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get cashierSurplusDiffTotalLabel => 'Difference';
 
   @override
-<<<<<<< HEAD
   String get cashierSurplusDiffTotalHelper =>
       'The difference from the total amount of the cash register at the very beginning.\nThis can quickly help you understand how much money the cash register has gained today.';
-=======
-  String get cashierSurplusDiffTotalHelper => 'The difference from the total amount of the cash register at the very beginning.\nThis can quickly help you understand how much money the cash register has gained today.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get orderTitle => 'Ordering';
@@ -3124,23 +2353,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get orderTutorialTitle => 'Ordering!';
 
   @override
-<<<<<<< HEAD
   String get orderTutorialContent =>
       'Once you have set up your menu, you can start ordering!\nLet\'s tap and go see what\'s available!\n';
-=======
-  String get orderTutorialContent => 'Once you have set up your menu, you can start ordering!\nLet\'s tap and go see what\'s available!\n';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get orderTutorialPrinterBtnTitle => 'Printer Status Change';
 
   @override
-<<<<<<< HEAD
   String get orderTutorialPrinterBtnContent =>
       'Printer status has changed, please check.';
-=======
-  String get orderTutorialPrinterBtnContent => 'Printer status has changed, please check.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String orderSnackbarPrinterConnected(String names) {
@@ -3153,19 +2374,12 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-<<<<<<< HEAD
   String get orderSnackbarCashierNotEnough =>
       'Insufficient cash in the cashier!';
 
   @override
   String get orderSnackbarCashierUsingSmallMoney =>
       'Using smaller denominations to give change';
-=======
-  String get orderSnackbarCashierNotEnough => 'Insufficient cash in the cashier!';
-
-  @override
-  String get orderSnackbarCashierUsingSmallMoney => 'Using smaller denominations to give change';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String orderSnackbarCashierUsingSmallMoneyHelper(String link) {
@@ -3198,10 +2412,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String orderLoaderMetaTotalCount(int count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-<<<<<<< HEAD
-=======
-      
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     );
     final String countString = countNumberFormat.format(count);
 
@@ -3216,13 +2426,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String orderProductListViewHelper(String name) {
-<<<<<<< HEAD
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'grid': 'Grid',
-      'list': 'List',
-      'other': 'UNKNOWN',
-    });
-=======
     String _temp0 = intl.Intl.selectLogic(
       name,
       {
@@ -3231,7 +2434,6 @@ class AppLocalizationsEn extends AppLocalizations {
         'other': 'UNKNOWN',
       },
     );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     return '$_temp0';
   }
 
@@ -3272,12 +2474,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get orderCartActionDiscountHint => 'e.g., 30 means 70% off';
 
   @override
-<<<<<<< HEAD
   String get orderCartActionDiscountHelper =>
       'The number here represents the \"percentage\" off, i.e., 85 means 15% off. For precise prices, use \"Price Change\".';
-=======
-  String get orderCartActionDiscountHelper => 'The number here represents the \"percentage\" off, i.e., 85 means 15% off. For precise prices, use \"Price Change\".';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get orderCartActionDiscountSuffix => '%';
@@ -3327,10 +2525,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String orderCartMetaTotalCount(int count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-<<<<<<< HEAD
-=======
-      
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     );
     final String countString = countNumberFormat.format(count);
 
@@ -3339,12 +2533,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String orderCartProductPrice(String price) {
-<<<<<<< HEAD
-    String _temp0 = intl.Intl.selectLogic(price, {
-      '0': 'Free',
-      'other': '\$$price',
-    });
-=======
     String _temp0 = intl.Intl.selectLogic(
       price,
       {
@@ -3352,7 +2540,6 @@ class AppLocalizationsEn extends AppLocalizations {
         'other': '\$$price',
       },
     );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     return '$_temp0';
   }
 
@@ -3369,30 +2556,20 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String orderCartIngredientStatus(String status) {
-<<<<<<< HEAD
-    String _temp0 = intl.Intl.selectLogic(status, {
-      'emptyCart': 'Please select a product to set its ingredients',
-      'differentProducts':
-          'Please select the same product to set its ingredients',
-      'noNeedIngredient': 'This product doesn\'t require ingredient settings',
-      'other': 'UNKNOWN',
-    });
-=======
     String _temp0 = intl.Intl.selectLogic(
       status,
       {
         'emptyCart': 'Please select a product to set its ingredients',
-        'differentProducts': 'Please select the same product to set its ingredients',
+        'differentProducts':
+            'Please select the same product to set its ingredients',
         'noNeedIngredient': 'This product doesn\'t require ingredient settings',
         'other': 'UNKNOWN',
       },
     );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     return '$_temp0';
   }
 
   @override
-<<<<<<< HEAD
   String get orderCartQuantityNotAble =>
       'Please select an ingredient to set quantity';
 
@@ -3400,13 +2577,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String orderCartQuantityLabel(String name, num amount) {
     final intl.NumberFormat amountNumberFormat =
         intl.NumberFormat.decimalPattern(localeName);
-=======
-  String get orderCartQuantityNotAble => 'Please select an ingredient to set quantity';
-
-  @override
-  String orderCartQuantityLabel(String name, num amount) {
-    final intl.NumberFormat amountNumberFormat = intl.NumberFormat.decimalPattern(localeName);
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     final String amountString = amountNumberFormat.format(amount);
 
     return '$name ($amountString)';
@@ -3414,12 +2584,8 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String orderCartQuantityDefaultLabel(num amount) {
-<<<<<<< HEAD
     final intl.NumberFormat amountNumberFormat =
         intl.NumberFormat.decimalPattern(localeName);
-=======
-    final intl.NumberFormat amountNumberFormat = intl.NumberFormat.decimalPattern(localeName);
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     final String amountString = amountNumberFormat.format(amount);
 
     return 'Default ($amountString)';
@@ -3456,12 +2622,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get orderCheckoutStashDialogRestoreTitle => 'Restore Stashed Order';
 
   @override
-<<<<<<< HEAD
   String get orderCheckoutStashDialogRestoreContent =>
       'This action will override the current cart contents.';
-=======
-  String get orderCheckoutStashDialogRestoreContent => 'This action will override the current cart contents.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get orderCheckoutStashDialogDeleteName => 'order';
@@ -3470,15 +2632,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get orderCheckoutAttributeTab => 'Customer';
 
   @override
-<<<<<<< HEAD
   String get orderCheckoutAttributeNoteTitle => '備註';
 
   @override
   String get orderCheckoutAttributeNoteHint => '一些關於此訂單的說明';
 
   @override
-=======
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
   String get orderCheckoutDetailsTab => 'Details';
 
   @override
@@ -3493,12 +2652,8 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-<<<<<<< HEAD
   String get orderCheckoutSnackbarPaidFailed =>
       'Payment is less than the order amount.';
-=======
-  String get orderCheckoutSnackbarPaidFailed => 'Payment is less than the order amount.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get orderObjectViewEmpty => 'No order records found';
@@ -3575,12 +2730,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get analysisHistoryCalendarTutorialTitle => 'Calendar';
 
   @override
-<<<<<<< HEAD
   String get analysisHistoryCalendarTutorialContent =>
       'Swipe up and down to adjust the time period, such as month or week.\nSwipe left and right to adjust the date range.';
-=======
-  String get analysisHistoryCalendarTutorialContent => 'Swipe up and down to adjust the time period, such as month or week.\nSwipe left and right to adjust the date range.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get analysisHistoryExportBtn => 'Export';
@@ -3589,12 +2740,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get analysisHistoryExportTutorialTitle => 'Export Orders Data';
 
   @override
-<<<<<<< HEAD
   String get analysisHistoryExportTutorialContent =>
       'Export orders externally for further analysis or backup.\nYou can export multi-day orders in the \"Transit\" page.';
-=======
-  String get analysisHistoryExportTutorialContent => 'Export orders externally for further analysis or backup.\nYou can export multi-day orders in the \"Transit\" page.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String analysisHistoryOrderListMetaId(String id) {
@@ -3603,15 +2750,8 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String analysisHistoryOrderListMetaPrice(num price) {
-<<<<<<< HEAD
     final intl.NumberFormat priceNumberFormat =
         intl.NumberFormat.compactCurrency(locale: localeName, symbol: '\$');
-=======
-    final intl.NumberFormat priceNumberFormat = intl.NumberFormat.compactCurrency(
-      locale: localeName,
-      symbol: '\$'
-    );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     final String priceString = priceNumberFormat.format(price);
 
     return 'Price: $priceString';
@@ -3619,15 +2759,8 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String analysisHistoryOrderListMetaPaid(num paid) {
-<<<<<<< HEAD
     final intl.NumberFormat paidNumberFormat =
         intl.NumberFormat.compactCurrency(locale: localeName, symbol: '\$');
-=======
-    final intl.NumberFormat paidNumberFormat = intl.NumberFormat.compactCurrency(
-      locale: localeName,
-      symbol: '\$'
-    );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     final String paidString = paidNumberFormat.format(paid);
 
     return 'Paid: $paidString';
@@ -3635,15 +2768,8 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String analysisHistoryOrderListMetaProfit(num profit) {
-<<<<<<< HEAD
     final intl.NumberFormat profitNumberFormat =
         intl.NumberFormat.compactCurrency(locale: localeName, symbol: '\$');
-=======
-    final intl.NumberFormat profitNumberFormat = intl.NumberFormat.compactCurrency(
-      locale: localeName,
-      symbol: '\$'
-    );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     final String profitString = profitNumberFormat.format(profit);
 
     return 'Profit: $profitString';
@@ -3669,34 +2795,22 @@ class AppLocalizationsEn extends AppLocalizations {
   String get analysisGoalsCountTitle => 'Order Count';
 
   @override
-<<<<<<< HEAD
   String get analysisGoalsCountDescription =>
       'The order count reflects the attractiveness of products to customers.\nIt represents the demand for your products in the market and helps you understand which products or time periods are most popular.\nA high order count may indicate the success of your pricing strategy or marketing activities and is one of the indicators of business model effectiveness.\nHowever, it\'s essential to note that simply pursuing a high order count may overlook profitability.';
-=======
-  String get analysisGoalsCountDescription => 'The order count reflects the attractiveness of products to customers.\nIt represents the demand for your products in the market and helps you understand which products or time periods are most popular.\nA high order count may indicate the success of your pricing strategy or marketing activities and is one of the indicators of business model effectiveness.\nHowever, it\'s essential to note that simply pursuing a high order count may overlook profitability.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get analysisGoalsRevenueTitle => 'Revenue';
 
   @override
-<<<<<<< HEAD
   String get analysisGoalsRevenueDescription =>
       'Revenue represents the total sales amount and is an indicator of business scale.\nHigh revenue may indicate that your products are popular and selling well, but revenue alone cannot reflect the sustainability and profitability of the business.\nSometimes, to increase revenue, companies may adopt strategies such as price reductions, which may affect profitability.';
-=======
-  String get analysisGoalsRevenueDescription => 'Revenue represents the total sales amount and is an indicator of business scale.\nHigh revenue may indicate that your products are popular and selling well, but revenue alone cannot reflect the sustainability and profitability of the business.\nSometimes, to increase revenue, companies may adopt strategies such as price reductions, which may affect profitability.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get analysisGoalsProfitTitle => 'Profit';
 
   @override
-<<<<<<< HEAD
   String get analysisGoalsProfitDescription =>
       'Profit is the balance after deducting operating costs from operating income and is crucial for the company\'s ongoing operations.\nProfit directly reflects operational efficiency and cost management capabilities.\nUnlike revenue, profit considers the business expenses, including raw material costs, labor, rent, etc.\nIt\'s a more practical indicator that helps you evaluate the effectiveness and sustainability of operations.';
-=======
-  String get analysisGoalsProfitDescription => 'Profit is the balance after deducting operating costs from operating income and is crucial for the company\'s ongoing operations.\nProfit directly reflects operational efficiency and cost management capabilities.\nUnlike revenue, profit considers the business expenses, including raw material costs, labor, rent, etc.\nIt\'s a more practical indicator that helps you evaluate the effectiveness and sustainability of operations.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get analysisGoalsCostTitle => 'Cost';
@@ -3722,12 +2836,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get analysisChartTutorialTitle => 'Chart Analysis';
 
   @override
-<<<<<<< HEAD
   String get analysisChartTutorialContent =>
       'With charts, you can visualize data changes more intuitively.\nStart designing charts to track your sales performance now!';
-=======
-  String get analysisChartTutorialContent => 'With charts, you can visualize data changes more intuitively.\nStart designing charts to track your sales performance now!';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get analysisChartCardEmptyData => 'No Data';
@@ -3737,15 +2847,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String analysisChartMetricName(String name) {
-<<<<<<< HEAD
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'revenue': 'Revenue',
-      'cost': 'Cost',
-      'profit': 'Profit',
-      'count': 'Quantity',
-      'other': 'UNKNOWN',
-    });
-=======
     String _temp0 = intl.Intl.selectLogic(
       name,
       {
@@ -3756,22 +2857,11 @@ class AppLocalizationsEn extends AppLocalizations {
         'other': 'UNKNOWN',
       },
     );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     return '$_temp0';
   }
 
   @override
   String analysisChartTargetName(String name) {
-<<<<<<< HEAD
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'order': 'Order',
-      'catalog': 'Category',
-      'product': 'Product',
-      'ingredient': 'Ingredient',
-      'attribute': 'Attribute',
-      'other': 'UNKNOWN',
-    });
-=======
     String _temp0 = intl.Intl.selectLogic(
       name,
       {
@@ -3783,7 +2873,6 @@ class AppLocalizationsEn extends AppLocalizations {
         'other': 'UNKNOWN',
       },
     );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     return '$_temp0';
   }
 
@@ -3813,15 +2902,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String analysisChartRangeTabName(String name) {
-<<<<<<< HEAD
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'day': 'Date',
-      'week': 'Week',
-      'month': 'Month',
-      'custom': 'Custom',
-      'other': 'UNKNOWN',
-    });
-=======
     String _temp0 = intl.Intl.selectLogic(
       name,
       {
@@ -3832,7 +2912,6 @@ class AppLocalizationsEn extends AppLocalizations {
         'other': 'UNKNOWN',
       },
     );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     return '$_temp0';
   }
 
@@ -3846,12 +2925,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get analysisChartModalIgnoreEmptyLabel => 'Ignore Empty Data';
 
   @override
-<<<<<<< HEAD
   String get analysisChartModalIgnoreEmptyHelper =>
       'Do not display if a product or metric has no data for that period.';
-=======
-  String get analysisChartModalIgnoreEmptyHelper => 'Do not display if a product or metric has no data for that period.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get analysisChartModalDivider => 'Data Settings';
@@ -3861,13 +2936,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String analysisChartModalTypeName(String name) {
-<<<<<<< HEAD
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'cartesian': 'Time Series Chart',
-      'circular': 'Pie Chart',
-      'other': 'UNKNOWN',
-    });
-=======
     String _temp0 = intl.Intl.selectLogic(
       name,
       {
@@ -3876,7 +2944,6 @@ class AppLocalizationsEn extends AppLocalizations {
         'other': 'UNKNOWN',
       },
     );
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     return '$_temp0';
   }
 
@@ -3884,41 +2951,26 @@ class AppLocalizationsEn extends AppLocalizations {
   String get analysisChartModalMetricLabel => 'Metrics to View';
 
   @override
-<<<<<<< HEAD
   String get analysisChartModalMetricHelper =>
       'Choose different types of metrics based on your objectives.';
-=======
-  String get analysisChartModalMetricHelper => 'Choose different types of metrics based on your objectives.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get analysisChartModalTargetLabel => 'Item Category';
 
   @override
-<<<<<<< HEAD
   String get analysisChartModalTargetHelper =>
       'Select the information to analyze in the chart.';
 
   @override
   String get analysisChartModalTargetErrorEmpty =>
       'Please select an item category';
-=======
-  String get analysisChartModalTargetHelper => 'Select the information to analyze in the chart.';
-
-  @override
-  String get analysisChartModalTargetErrorEmpty => 'Please select an item category';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get analysisChartModalTargetItemLabel => 'Item Selection';
 
   @override
-<<<<<<< HEAD
   String get analysisChartModalTargetItemHelper =>
       'Choose the items you want to observe, such as the quantity of a specific product within a certain period.';
-=======
-  String get analysisChartModalTargetItemHelper => 'Choose the items you want to observe, such as the quantity of a specific product within a certain period.';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   String get analysisChartModalTargetItemSelectAll => 'Select All';

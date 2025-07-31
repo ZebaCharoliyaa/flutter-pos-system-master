@@ -1,10 +1,6 @@
 name: possystem
 description: POS system by Flutter
 publish_to: "none"
-<<<<<<< HEAD
-homepage: https://github.com/evan361425/flutter-pos-system
-=======
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 version: 2.10.5+21005002
 
 environment:
@@ -14,37 +10,17 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-<<<<<<< HEAD
-  firebase_core: ^3.9.0
-  cloud_firestore: ^5.6.3
-  flutter_localizations:
-    sdk: flutter
-
-  # core helper
-  go_router: ^14.6.2
-  provider: ^6.1.2
-  intl: ^0.20.2
-  collection: ^1.19.0
-=======
   flutter_localizations:
     sdk: flutter
 
   firebase_core: ^3.9.0
   cloud_firestore: ^5.6.3
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
   firebase_analytics: ^11.3.6
   firebase_auth: ^5.3.4
   firebase_crashlytics: ^4.2.0
   firebase_in_app_messaging: ^0.8.0+11
   firebase_performance: ^0.10.0+11
 
-<<<<<<< HEAD
-  # services
-  sqflite: ^2.4.1  # 24, 11-08
-  sembast: ^3.8.0  # 24, 12-04
-  shared_preferences: ^2.3.4
-  http: ^1.2.2
-=======
   go_router: ^14.6.2
   provider: ^6.1.2
   intl: ^0.20.2
@@ -55,55 +31,19 @@ dependencies:
   shared_preferences: ^2.3.4
   http: ^1.2.2
 
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
   packages:
     git:
       url: https://github.com/AymanSuleman/flutter-pos-packages-mock.git
       ref: master
-<<<<<<< HEAD
-=======
-
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
   flutter_blue_plus:
     git:
       url: https://github.com/evan361425/flutter_blue_plus
       ref: uint8
 
-<<<<<<< HEAD
-  # google services
-=======
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
   googleapis: ^13.2.0
   google_sign_in: ^6.2.2
   extension_google_sign_in_as_googleapis_auth: ^2.0.12
 
-<<<<<<< HEAD
-  # components
-  table_calendar: ^3.2.0  # 24, 12-12
-  syncfusion_flutter_charts: ^28.1.36
-  spotlight_ant: ^1.4.3
-
-  # image
-  image: ^4.5.2
-  image_picker: ^1.1.2
-  image_cropper: ^8.1.0
-  cached_network_image: ^3.4.0  # 24, 08-13, downgrade for firebase
-  flutter_svg: ^2.0.16  # 24, 11-26
-
-  # Make it easy to test
-  file: ^7.0.1  # 24, 10-08
-
-  # tools
-  uuid: ^4.5.1  # 24, 09-26
-  wakelock_plus: ^1.2.10  # 24, 12-21
-  characters: ^1.3.0  # 24, 10-16
-  path_provider: ^2.1.5  # 24, 10-29
-  url_launcher: ^6.3.1  # 24, 10-08
-  flutter_native_splash: ^2.4.3  # 24, 11-17
-  package_info_plus: ^8.1.2  # 24, 12-12
-  visibility_detector: ^0.4.0+2  # 23, 03-09
-  cupertino_icons: ^1.0.8  # This is for google-package which use it in some case
-=======
   table_calendar: 3.2.0
   syncfusion_flutter_charts: ^28.1.36
   spotlight_ant: ^1.4.3
@@ -124,55 +64,10 @@ dependencies:
   package_info_plus: ^8.1.2
   visibility_detector: ^0.4.0+2
   cupertino_icons: ^1.0.8
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-<<<<<<< HEAD
-
-  # code style
-  flutter_lints: ^5.0.0
-
-  # mock object
-  build_runner: ^2.4.14
-  mockito: ^5.4.5
-  sqflite_common: ^2.5.4+6  # logging
-  sqflite_common_ffi: ^2.3.4+4
-
-  arb_glue: ^1.0.0
-
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
-
-# The following section is specific to Flutter.
-flutter:
-  uses-material-design: true
-
-  # Enable generation of localized Strings from arb files.
-  generate: true
-
-  assets:
-  - assets/food_placeholder.png
-  - assets/google_sheet_icon.svg
-  - assets/feature_request_please.gif
-  - assets/google_signin_button.svg
-
-# flutter pub run flutter_native_splash:create
-flutter_native_splash:
-  color: "#5c98ff"
-  fullscreen: true
-  image: assets/logo.png
-
-arb_glue:
-  source: assets/l10n
-  destination: lib/l10n
-  author: Lu Shueh Chou
-  fileTemplate: 'app_{lang}.arb'
-  base: en
-  lastModified: false
-  verbose: true
-=======
   flutter_lints: ^5.0.0
   build_runner: ^2.4.14
   mockito: ^5.4.5
@@ -198,4 +93,3 @@ flutter:
   #   preferred-supported-locales:
   #     - en
   #     - zh
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a

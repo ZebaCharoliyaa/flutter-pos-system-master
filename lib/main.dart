@@ -108,17 +108,6 @@
 //   );
 // }
 
-<<<<<<< HEAD
-import 'dart:async';
-
-import 'package:firebase_analytics/firebase_analytics.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_crashlytics/firebase_crashlytics.dart';
-import 'package:firebase_in_app_messaging/firebase_in_app_messaging.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
-=======
 // import 'dart:async';
 
 // import 'package:firebase_analytics/firebase_analytics.dart';
@@ -247,36 +236,10 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:firebase_in_app_messaging/firebase_in_app_messaging.dart';
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 import 'package:possystem/constants/constant.dart';
 import 'package:possystem/models/analysis/analysis.dart';
 import 'package:possystem/models/printer.dart';
 import 'package:possystem/models/repository/cart.dart';
-<<<<<<< HEAD
-import 'package:provider/provider.dart';
-
-import 'app.dart';
-import 'firebase_compatible_options.dart';
-import 'helpers/logger.dart';
-import 'models/repository/cashier.dart';
-import 'models/repository/menu.dart';
-import 'models/repository/order_attributes.dart';
-import 'models/repository/quantities.dart';
-import 'models/repository/replenisher.dart';
-import 'models/repository/seller.dart';
-import 'models/repository/stock.dart';
-import 'services/cache.dart';
-import 'services/database.dart';
-import 'services/storage.dart';
-import 'settings/collect_events_setting.dart';
-import 'settings/settings_provider.dart';
-
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  FlutterNativeSplash.preserve(widgetsBinding: WidgetsBinding.instance);
-
-  // ✅ Check if Firebase is already initialized
-=======
 import 'package:possystem/models/repository/cashier.dart';
 import 'package:possystem/models/repository/menu.dart';
 import 'package:possystem/models/repository/order_attributes.dart';
@@ -303,36 +266,23 @@ void main() async {
 
   print('✅ Firebase Connected to Project: ${DefaultFirebaseOptions.currentPlatform.projectId}');
 
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
   if (Firebase.apps.isEmpty) {
     await Firebase.initializeApp();
     Log.out('Firebase initialized: ${DefaultFirebaseOptions.currentPlatform.appId}', 'init');
   }
 
-<<<<<<< HEAD
-  // ✅ Configure Firebase Crashlytics
-=======
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
   PlatformDispatcher.instance.onError = (error, stack) {
     FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
     return true;
   };
 
-<<<<<<< HEAD
-  // ✅ Disable Firebase Analytics & Crashlytics in Debug Mode
-=======
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
   if (kDebugMode) {
     await FirebaseAnalytics.instance.setAnalyticsCollectionEnabled(false);
     await FirebaseCrashlytics.instance.setCrashlyticsCollectionEnabled(false);
     await FirebaseInAppMessaging.instance.setMessagesSuppressed(true);
   }
 
-<<<<<<< HEAD
-  // ✅ Initialize Services
-=======
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
   await Future.wait([
     Database.instance.initialize(logWhenQuery: isLocalTest),
     Storage.instance.initialize(),
@@ -342,10 +292,6 @@ void main() async {
   SettingsProvider.instance.initialize();
   Log.allowSendEvents = CollectEventsSetting.instance.value;
 
-<<<<<<< HEAD
-  // ✅ Initialize Repositories
-=======
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
   await Future.wait([
     Stock().initialize(),
     Quantities().initialize(),
@@ -357,12 +303,7 @@ void main() async {
     Menu().initialize(),
   ]);
 
-<<<<<<< HEAD
-  // ✅ Start App
-  runApp(MyApp());
-=======
   runApp(const MyApp());
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 }
 
 class MyApp extends StatelessWidget {
@@ -383,9 +324,6 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider.value(value: Cart.instance),
         ChangeNotifierProvider.value(value: Printers.instance),
       ],
-<<<<<<< HEAD
-      child: const App(),
-=======
       child: MaterialApp(
         title: 'POS System',
         theme: ThemeData(primarySwatch: Colors.blue),
@@ -401,7 +339,6 @@ class MyApp extends StatelessWidget {
         ],
         home: const App(), // Your main App widget
       ),
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     );
   }
 }

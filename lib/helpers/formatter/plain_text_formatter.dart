@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // import 'package:intl/intl.dart';
 // import 'package:possystem/helpers/formatter/formatter.dart';
 // import 'package:possystem/helpers/util.dart';
@@ -480,7 +478,6 @@
 // }
 
 //-----------------new code -----------------//
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 import 'package:intl/intl.dart';
 import 'package:possystem/helpers/formatter/formatter.dart';
 import 'package:possystem/helpers/util.dart';
@@ -576,12 +573,8 @@ class _MenuTransformer extends ModelTransformer<Menu> {
                           ingredient.items.length,
                           quantityPrefix +
                               ingredient.items
-<<<<<<< HEAD
-                                  .map((quantity) => '${quantity.name}（${S.transitPTFormatModelMenuQuantity(
-=======
                                   .map((quantity) =>
                                       '${quantity.name}（${S.transitPTFormatModelMenuQuantity(
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
                                         nf.format(quantity.amount),
                                         quantity.additionalPrice.toCurrency(),
                                         quantity.additionalCost.toCurrency(),
@@ -629,11 +622,7 @@ class _MenuTransformer extends ModelTransformer<Menu> {
     );
     final reQuantity = RegExp(
       _rePre +
-<<<<<<< HEAD
-          r'(?<name>.+)（' + // hard coded naming pattern
-=======
           r'(?<name>.+)（' +
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
           S
               .transitPTFormatModelMenuQuantity(
                 '(?<amount>$_reDig)',
@@ -690,12 +679,8 @@ class _MenuTransformer extends ModelTransformer<Menu> {
         }
         if (quaStartIndex == ing.length) continue;
 
-<<<<<<< HEAD
-        final quaSplit = ing.substring(quaStartIndex + 1).split(quantityDelimiter);
-=======
         final quaSplit =
             ing.substring(quaStartIndex + 1).split(quantityDelimiter);
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
         for (final qua in quaSplit) {
           match = reQuantity.firstMatch(qua);
           if (match != null) {
@@ -719,12 +704,8 @@ class _StockTransformer extends ModelTransformer<Stock> {
   const _StockTransformer(super.target);
 
   @override
-<<<<<<< HEAD
-  List<String> getHeader() => [S.transitPTFormatModelStockMetaIngredient(target.length)];
-=======
   List<String> getHeader() =>
       [S.transitPTFormatModelStockMetaIngredient(target.length)];
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   List<List<String>> getRows() {
@@ -761,11 +742,6 @@ class _StockTransformer extends ModelTransformer<Stock> {
           '(?<amount>$_reDig)',
           r'(?<details>.*)',
         ));
-<<<<<<< HEAD
-    final reMax = RegExp(S.transitPTFormatModelStockIngredientMaxAmount(1, '(?<max>$_reDig)'));
-    final reRestock = RegExp(
-      S.transitPTFormatModelStockIngredientRestockPrice(1, '(?<q>$_reDig)', '(?<p>$_reDig)').replaceAll(r'$', r'\$'),
-=======
     final reMax = RegExp(
         S.transitPTFormatModelStockIngredientMaxAmount(1, '(?<max>$_reDig)'));
     final reRestock = RegExp(
@@ -773,7 +749,6 @@ class _StockTransformer extends ModelTransformer<Stock> {
           .transitPTFormatModelStockIngredientRestockPrice(
               1, '(?<q>$_reDig)', '(?<p>$_reDig)')
           .replaceAll(r'$', r'\$'),
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     );
 
     final result = <List<String>>[];
@@ -805,12 +780,8 @@ class _QuantitiesTransformer extends ModelTransformer<Quantities> {
   const _QuantitiesTransformer(super.target);
 
   @override
-<<<<<<< HEAD
-  List<String> getHeader() => [S.transitPTFormatModelQuantitiesMetaQuantity(target.length)];
-=======
   List<String> getHeader() =>
       [S.transitPTFormatModelQuantitiesMetaQuantity(target.length)];
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   List<List<String>> getRows() {
@@ -861,12 +832,8 @@ class _ReplenisherTransformer extends ModelTransformer<Replenisher> {
   static const ingredientDelimiter = '：';
 
   @override
-<<<<<<< HEAD
-  List<String> getHeader() => [S.transitPTFormatModelReplenisherMetaReplenishment(target.length)];
-=======
   List<String> getHeader() =>
       [S.transitPTFormatModelReplenisherMetaReplenishment(target.length)];
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 
   @override
   List<List<String>> getRows() {
@@ -875,24 +842,16 @@ class _ReplenisherTransformer extends ModelTransformer<Replenisher> {
     return [
       [S.transitPTFormatModelReplenisherHeader(target.length)],
       target.itemList.map((repl) {
-<<<<<<< HEAD
-        String d = repl.ingredientData.entries.map((e) => '${e.key.name}（${nf.format(e.value)}）').join('、');
-=======
         String d = repl.ingredientData.entries
             .map((e) => '${e.key.name}（${nf.format(e.value)}）')
             .join('、');
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
         d = d.isEmpty ? '' : ingredientDelimiter + d;
         return S.transitPTFormatModelReplenisherReplenishment(
           (counter++).toString(),
           repl.name,
-<<<<<<< HEAD
-          S.transitPTFormatModelReplenisherReplenishmentDetails(repl.ingredientData.length) + d,
-=======
           S.transitPTFormatModelReplenisherReplenishmentDetails(
                   repl.ingredientData.length) +
               d,
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
         );
       }).toList(),
     ];
@@ -948,19 +907,12 @@ class _OATransformer extends ModelTransformer<OrderAttributes> {
       [S.transitPTFormatModelOaHeader(target.length)],
       target.itemList.map((attr) {
         String details = attr.itemList.map((e) {
-<<<<<<< HEAD
-          final details = [
-            e.isDefault ? S.transitPTFormatModelOaDefaultOption : '',
-            e.modeValue == null ? '' : S.transitPTFormatModelOaModeValue(e.modeValue!),
-          ].where((e) => e.isNotEmpty).join('，');
-=======
           final details = <String>[
             e.isDefault ? S.transitPTFormatModelOaDefaultOption : '',
             e.modeValue == null
                 ? ''
                 : S.transitPTFormatModelOaModeValue(e.modeValue!),
           ].where((element) => element.isNotEmpty).join('，');
->>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
           return details.isEmpty ? e.name : '${e.name}（$details）';
         }).join('、');
         details = details.isEmpty ? '' : '：$details';
