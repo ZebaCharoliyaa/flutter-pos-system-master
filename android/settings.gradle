@@ -1,4 +1,5 @@
 pluginManagement {
+<<<<<<< HEAD
     settings.ext.flutterSdkPath = {
         def properties = new Properties()
         file("local.properties").withInputStream { properties.load(it) }
@@ -9,10 +10,13 @@ pluginManagement {
 
     includeBuild("${settings.ext.flutterSdkPath}/packages/flutter_tools/gradle")
 
+=======
+>>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     repositories {
         google()
         mavenCentral()
         gradlePluginPortal()
+<<<<<<< HEAD
     }
 
     plugins {
@@ -29,4 +33,20 @@ plugins {
     id "com.google.firebase.crashlytics" version "2.9.9" apply false
 }
 
+=======
+        // This is required for Flutter plugin resolution
+        includeBuild("../..")
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "flutter-pos-system-master"
+>>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
 include ':app'

@@ -2,6 +2,7 @@ C/C++ Structured Logj
 h
 fD:\flutter-pos-system-master\android\app\.cxx\RelWithDebInfo\6v14u3w6\x86\additional_project_files.txtC
 A
+<<<<<<< HEAD
 ?com.android.build.gradle.internal.cxx.io.EncodedFileFingerPrint	ÞÈ×³Ó2 ™¥ñèÒ2g
 e
 cD:\flutter-pos-system-master\android\app\.cxx\RelWithDebInfo\6v14u3w6\x86\android_gradle_build.json	ÞÈ×³Ó2 ¥ñèÒ2l
@@ -26,3 +27,29 @@ c
 aD:\flutter-pos-system-master\android\app\.cxx\RelWithDebInfo\6v14u3w6\x86\symbol_folder_index.txt	ÞÈ×³Ó2X µ¥ñèÒ2O
 M
 KD:\src\flutter\packages\flutter_tools\gradle\src\main\groovy\CMakeLists.txt	ÞÈ×³Ó2§ Õ®ŽèÒ2
+=======
+?com.android.build.gradle.internal.cxx.io.EncodedFileFingerPrint	Ý„É´Ô2 ™¥ñèÒ2g
+e
+cD:\flutter-pos-system-master\android\app\.cxx\RelWithDebInfo\6v14u3w6\x86\android_gradle_build.json	Ý„É´Ô2 ¥ñèÒ2l
+j
+hD:\flutter-pos-system-master\android\app\.cxx\RelWithDebInfo\6v14u3w6\x86\android_gradle_build_mini.json	Ý„É´Ô2þ ²¥ñèÒ2Y
+W
+UD:\flutter-pos-system-master\android\app\.cxx\RelWithDebInfo\6v14u3w6\x86\build.ninja	Ý„É´Ô2¿Ï Ä£ñèÒ2]
+[
+YD:\flutter-pos-system-master\android\app\.cxx\RelWithDebInfo\6v14u3w6\x86\build.ninja.txt	Ý„É´Ô2b
+`
+^D:\flutter-pos-system-master\android\app\.cxx\RelWithDebInfo\6v14u3w6\x86\build_file_index.txt	Ý„É´Ô2K µ¥ñèÒ2c
+a
+_D:\flutter-pos-system-master\android\app\.cxx\RelWithDebInfo\6v14u3w6\x86\compile_commands.json	Ý„É´Ô2g
+e
+cD:\flutter-pos-system-master\android\app\.cxx\RelWithDebInfo\6v14u3w6\x86\compile_commands.json.bin	Ý„É´Ô2	m
+k
+iD:\flutter-pos-system-master\android\app\.cxx\RelWithDebInfo\6v14u3w6\x86\metadata_generation_command.txt	Ý„É´Ô2
+± ´¥ñèÒ2`
+^
+\D:\flutter-pos-system-master\android\app\.cxx\RelWithDebInfo\6v14u3w6\x86\prefab_config.json	Ý„É´Ô2( ´¥ñèÒ2e
+c
+aD:\flutter-pos-system-master\android\app\.cxx\RelWithDebInfo\6v14u3w6\x86\symbol_folder_index.txt	Ý„É´Ô2X µ¥ñèÒ2O
+M
+KD:\src\flutter\packages\flutter_tools\gradle\src\main\groovy\CMakeLists.txt	Ý„É´Ô2§ Õ®ŽèÒ2
+>>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a

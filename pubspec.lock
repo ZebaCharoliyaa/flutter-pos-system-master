@@ -41,6 +41,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.3"
+<<<<<<< HEAD
   arb_glue:
     dependency: "direct dev"
     description:
@@ -49,6 +50,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.0"
+=======
+>>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
   archive:
     dependency: transitive
     description:

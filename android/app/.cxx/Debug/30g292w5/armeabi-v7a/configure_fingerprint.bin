@@ -2,6 +2,7 @@ C/C++ Structured Logi
 g
 eD:\flutter-pos-system-master\android\app\.cxx\Debug\30g292w5\armeabi-v7a\additional_project_files.txtC
 A
+<<<<<<< HEAD
 ?com.android.build.gradle.internal.cxx.io.EncodedFileFingerPrint	ƒèÕÓ2 µõ¸êÒ2f
 d
 bD:\flutter-pos-system-master\android\app\.cxx\Debug\30g292w5\armeabi-v7a\android_gradle_build.json	ƒèÕÓ2› ·õ¸êÒ2k
@@ -26,3 +27,29 @@ b
 `D:\flutter-pos-system-master\android\app\.cxx\Debug\30g292w5\armeabi-v7a\symbol_folder_index.txt	ƒèÕÓ2W Êõ¸êÒ2O
 M
 KD:\src\flutter\packages\flutter_tools\gradle\src\main\groovy\CMakeLists.txt	ƒèÕÓ2§ Õ®ŽèÒ2
+=======
+?com.android.build.gradle.internal.cxx.io.EncodedFileFingerPrint	Ã×©ÐÖ2 µõ¸êÒ2f
+d
+bD:\flutter-pos-system-master\android\app\.cxx\Debug\30g292w5\armeabi-v7a\android_gradle_build.json	Ã×©ÐÖ2› ·õ¸êÒ2k
+i
+gD:\flutter-pos-system-master\android\app\.cxx\Debug\30g292w5\armeabi-v7a\android_gradle_build_mini.json	Ã×©ÐÖ2ü Èõ¸êÒ2X
+V
+TD:\flutter-pos-system-master\android\app\.cxx\Debug\30g292w5\armeabi-v7a\build.ninja	Ã×©ÐÖ2¨Ï §ð¸êÒ2\
+Z
+XD:\flutter-pos-system-master\android\app\.cxx\Debug\30g292w5\armeabi-v7a\build.ninja.txt	Ä×©ÐÖ2a
+_
+]D:\flutter-pos-system-master\android\app\.cxx\Debug\30g292w5\armeabi-v7a\build_file_index.txt	Ä×©ÐÖ2K Êõ¸êÒ2b
+`
+^D:\flutter-pos-system-master\android\app\.cxx\Debug\30g292w5\armeabi-v7a\compile_commands.json	Ä×©ÐÖ2f
+d
+bD:\flutter-pos-system-master\android\app\.cxx\Debug\30g292w5\armeabi-v7a\compile_commands.json.bin	Ä×©ÐÖ2	l
+j
+hD:\flutter-pos-system-master\android\app\.cxx\Debug\30g292w5\armeabi-v7a\metadata_generation_command.txt	Ä×©ÐÖ2
+µ Éõ¸êÒ2_
+]
+[D:\flutter-pos-system-master\android\app\.cxx\Debug\30g292w5\armeabi-v7a\prefab_config.json	Å×©ÐÖ2( Êõ¸êÒ2d
+b
+`D:\flutter-pos-system-master\android\app\.cxx\Debug\30g292w5\armeabi-v7a\symbol_folder_index.txt	Å×©ÐÖ2W Êõ¸êÒ2O
+M
+KD:\src\flutter\packages\flutter_tools\gradle\src\main\groovy\CMakeLists.txt	Å×©ÐÖ2§ Õ®ŽèÒ2
+>>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a

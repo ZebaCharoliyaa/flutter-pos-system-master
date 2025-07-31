@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // buildscript {
 //     ext.kotlin_version = '1.9.25'
 //     repositories {
@@ -51,6 +52,22 @@ allprojects {
         google()
         mavenCentral()
         maven { url "https://jitpack.io" } // optional but helps with other dependencies
+=======
+buildscript {
+    ext.kotlin_version = '1.9.25'
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:8.3.0"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.google.gms:google-services:4.4.0"
+        classpath "com.google.firebase:perf-plugin:1.4.2"
+        classpath "com.google.firebase:firebase-crashlytics-gradle:2.9.9"
+>>>>>>> e07ed3f5bba02f677bebb989a7ee35cc18d7451a
     }
 }
 
