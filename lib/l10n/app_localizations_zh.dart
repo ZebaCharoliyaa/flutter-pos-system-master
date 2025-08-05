@@ -45,12 +45,15 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String settingThemeName(String name) {
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'dark': '暗色模式',
-      'light': '日光模式',
-      'system': '跟隨系統',
-      'other': 'UNKNOWN',
-    });
+    String _temp0 = intl.Intl.selectLogic(
+      name,
+      {
+        'dark': '暗色模式',
+        'light': '日光模式',
+        'system': '跟隨系統',
+        'other': 'UNKNOWN',
+      },
+    );
     return '$_temp0';
   }
 
@@ -62,23 +65,29 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String settingCheckoutWarningName(String name) {
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'showAll': '全部顯示',
-      'onlyNotEnough': '僅不夠時顯示',
-      'hideAll': '全部隱藏',
-      'other': 'UNKNOWN',
-    });
+    String _temp0 = intl.Intl.selectLogic(
+      name,
+      {
+        'showAll': '全部顯示',
+        'onlyNotEnough': '僅不夠時顯示',
+        'hideAll': '全部隱藏',
+        'other': 'UNKNOWN',
+      },
+    );
     return '$_temp0';
   }
 
   @override
   String settingCheckoutWarningTip(String name) {
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'showAll': '若使用小錢去找，顯示提示。\n例如 5 塊錢不夠了，開始用 5 個 1 塊去找錢',
-      'onlyNotEnough': '當零錢不夠找的時候，顯示提示。',
-      'hideAll': '當點餐時，收銀機不會顯示任何提示',
-      'other': 'UNKNOWN',
-    });
+    String _temp0 = intl.Intl.selectLogic(
+      name,
+      {
+        'showAll': '若使用小錢去找，顯示提示。\n例如 5 塊錢不夠了，開始用 5 個 1 塊去找錢',
+        'onlyNotEnough': '當零錢不夠找的時候，顯示提示。',
+        'hideAll': '當點餐時，收銀機不會顯示任何提示',
+        'other': 'UNKNOWN',
+      },
+    );
     return '$_temp0';
   }
 
@@ -99,9 +108,8 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String stockUpdatedAt(DateTime updatedAt) {
-    final intl.DateFormat updatedAtDateFormat = intl.DateFormat.MMMEd(
-      localeName,
-    );
+    final intl.DateFormat updatedAtDateFormat =
+        intl.DateFormat.MMMEd(localeName);
     final String updatedAtString = updatedAtDateFormat.format(updatedAt);
 
     return '上次補貨時間：$updatedAtString';
@@ -242,11 +250,14 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String stockReplenishmentApplyConfirmColumn(String value) {
-    String _temp0 = intl.Intl.selectLogic(value, {
-      'name': '名稱',
-      'amount': '數量',
-      'other': 'UNKNOWN',
-    });
+    String _temp0 = intl.Intl.selectLogic(
+      value,
+      {
+        'name': '名稱',
+        'amount': '數量',
+        'other': 'UNKNOWN',
+      },
+    );
     return '$_temp0';
   }
 
@@ -376,27 +387,33 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String printerStatusName(String name) {
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'good': '正常',
-      'writeFailed': '上次列印失敗',
-      'paperNotFound': '缺紙',
-      'tooHot': '出單機過熱',
-      'lowBattery': '電量不足',
-      'printing': '列印中',
-      'unknown': '未知',
-      'other': 'UNKNOWN',
-    });
+    String _temp0 = intl.Intl.selectLogic(
+      name,
+      {
+        'good': '正常',
+        'writeFailed': '上次列印失敗',
+        'paperNotFound': '缺紙',
+        'tooHot': '出單機過熱',
+        'lowBattery': '電量不足',
+        'printing': '列印中',
+        'unknown': '未知',
+        'other': 'UNKNOWN',
+      },
+    );
     return '$_temp0';
   }
 
   @override
   String printerSignalName(String name) {
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'good': '良好',
-      'normal': '一般',
-      'weak': '微弱',
-      'other': 'UNKNOWN',
-    });
+    String _temp0 = intl.Intl.selectLogic(
+      name,
+      {
+        'good': '良好',
+        'normal': '一般',
+        'weak': '微弱',
+        'other': 'UNKNOWN',
+      },
+    );
     return '$_temp0';
   }
 
@@ -551,48 +568,60 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String transitMethodName(String name) {
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'googleSheet': 'Google 試算表',
-      'plainText': '純文字',
-      'other': 'UNKNOWN',
-    });
+    String _temp0 = intl.Intl.selectLogic(
+      name,
+      {
+        'googleSheet': 'Google 試算表',
+        'plainText': '純文字',
+        'other': 'UNKNOWN',
+      },
+    );
     return '$_temp0';
   }
 
   @override
   String transitCatalogName(String name) {
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'order': '訂單記錄',
-      'model': '店家資訊',
-      'other': 'UNKNOWN',
-    });
+    String _temp0 = intl.Intl.selectLogic(
+      name,
+      {
+        'order': '訂單記錄',
+        'model': '店家資訊',
+        'other': 'UNKNOWN',
+      },
+    );
     return '$_temp0';
   }
 
   @override
   String transitCatalogHelper(String name) {
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'order': '訂單資訊可以讓你匯出到第三方位置後做更細緻的統計分析。',
-      'model': '商家資訊通常是用來把菜單、庫存等資訊同步到第三方位置或用來匯入到另一台手機。',
-      'other': 'UNKNOWN',
-    });
+    String _temp0 = intl.Intl.selectLogic(
+      name,
+      {
+        'order': '訂單資訊可以讓你匯出到第三方位置後做更細緻的統計分析。',
+        'model': '商家資訊通常是用來把菜單、庫存等資訊同步到第三方位置或用來匯入到另一台手機。',
+        'other': 'UNKNOWN',
+      },
+    );
     return '$_temp0';
   }
 
   @override
   String transitModelName(String name) {
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'menu': '菜單',
-      'stock': '庫存',
-      'quantities': '份量',
-      'replenisher': '補貨',
-      'orderAttr': '顧客設定',
-      'order': '訂單',
-      'orderDetailsAttr': '訂單顧客設定',
-      'orderDetailsProduct': '訂單產品細項',
-      'orderDetailsIngredient': '訂單成分細項',
-      'other': 'UNKNOWN',
-    });
+    String _temp0 = intl.Intl.selectLogic(
+      name,
+      {
+        'menu': '菜單',
+        'stock': '庫存',
+        'quantities': '份量',
+        'replenisher': '補貨',
+        'orderAttr': '顧客設定',
+        'order': '訂單',
+        'orderDetailsAttr': '訂單顧客設定',
+        'orderDetailsProduct': '訂單產品細項',
+        'orderDetailsIngredient': '訂單成分細項',
+        'other': 'UNKNOWN',
+      },
+    );
     return '$_temp0';
   }
 
@@ -625,10 +654,8 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String transitOrderItemTitle(DateTime date) {
-    final intl.DateFormat dateDateFormat = intl.DateFormat(
-      'MMM d HH:mm:ss',
-      localeName,
-    );
+    final intl.DateFormat dateDateFormat =
+        intl.DateFormat('MMM d HH:mm:ss', localeName);
     final String dateString = dateDateFormat.format(date);
 
     return '$dateString';
@@ -710,14 +737,17 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String transitImportColumnStatus(String name) {
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'normal': '（一般）',
-      'staged': '（新增）',
-      'stagedIng': '（新的成分）',
-      'stagedQua': '（新的份量）',
-      'updated': '（異動）',
-      'other': 'UNKNOWN',
-    });
+    String _temp0 = intl.Intl.selectLogic(
+      name,
+      {
+        'normal': '（一般）',
+        'staged': '（新增）',
+        'stagedIng': '（新的成分）',
+        'stagedQua': '（新的份量）',
+        'updated': '（異動）',
+        'other': 'UNKNOWN',
+      },
+    );
     return '$_temp0';
   }
 
@@ -792,10 +822,13 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String transitGSSpreadsheetSelectionHint(String name) {
-    String _temp0 = intl.Intl.selectLogic(name, {
-      '_': '輸入試算表網址或試算表 ID',
-      'other': '原試算表為「$name」',
-    });
+    String _temp0 = intl.Intl.selectLogic(
+      name,
+      {
+        '_': '輸入試算表網址或試算表 ID',
+        'other': '原試算表為「$name」',
+      },
+    );
     return '$_temp0';
   }
 
@@ -836,18 +869,21 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String transitGSModelStatus(String model) {
-    String _temp0 = intl.Intl.selectLogic(model, {
-      'menu': '更新菜單中..',
-      'stock': '更新庫存中..',
-      'quantities': '更新份量中..',
-      'replenisher': '更新補貨中..',
-      'orderAttr': '更新顧客設定中..',
-      'order': '匯出訂單中..',
-      'orderDetailsAttr': '匯出顧客設定中..',
-      'orderDetailsProduct': '匯出產品細項中..',
-      'orderDetailsIngredient': '匯出成分細項中..',
-      'other': 'UNKNOWN',
-    });
+    String _temp0 = intl.Intl.selectLogic(
+      model,
+      {
+        'menu': '更新菜單中..',
+        'stock': '更新庫存中..',
+        'quantities': '更新份量中..',
+        'replenisher': '更新補貨中..',
+        'orderAttr': '更新顧客設定中..',
+        'order': '匯出訂單中..',
+        'orderDetailsAttr': '匯出顧客設定中..',
+        'orderDetailsProduct': '匯出產品細項中..',
+        'orderDetailsIngredient': '匯出成分細項中..',
+        'other': 'UNKNOWN',
+      },
+    );
     return '$_temp0';
   }
 
@@ -910,21 +946,27 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String transitGSOrderMetaOverwrite(String value) {
-    String _temp0 = intl.Intl.selectLogic(value, {
-      'true': '會覆寫',
-      'false': '不會覆寫',
-      'other': 'UNKNOWN',
-    });
+    String _temp0 = intl.Intl.selectLogic(
+      value,
+      {
+        'true': '會覆寫',
+        'false': '不會覆寫',
+        'other': 'UNKNOWN',
+      },
+    );
     return '$_temp0';
   }
 
   @override
   String transitGSOrderMetaTitlePrefix(String value) {
-    String _temp0 = intl.Intl.selectLogic(value, {
-      'true': '有日期前綴',
-      'false': '沒有日期前綴',
-      'other': 'UNKNOWN',
-    });
+    String _temp0 = intl.Intl.selectLogic(
+      value,
+      {
+        'true': '有日期前綴',
+        'false': '沒有日期前綴',
+        'other': 'UNKNOWN',
+      },
+    );
     return '$_temp0';
   }
 
@@ -1090,10 +1132,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String transitPTFormatOrderPrice(
-    int hasProducts,
-    String price,
-    String productsPrice,
-  ) {
+      int hasProducts, String price, String productsPrice) {
     String _temp0 = intl.Intl.pluralLogic(
       hasProducts,
       locale: localeName,
@@ -1110,10 +1149,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String transitPTFormatOrderProductCount(
-    int count,
-    int setCount,
-    String products,
-  ) {
+      int count, int setCount, String products) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
@@ -1125,14 +1161,8 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String transitPTFormatOrderProduct(
-    int hasIngredient,
-    String product,
-    String catalog,
-    int count,
-    String price,
-    String ingredients,
-  ) {
+  String transitPTFormatOrderProduct(int hasIngredient, String product,
+      String catalog, int count, String price, String ingredients) {
     String _temp0 = intl.Intl.pluralLogic(
       hasIngredient,
       locale: localeName,
@@ -1144,10 +1174,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String transitPTFormatOrderIngredient(
-    num amount,
-    String ingredient,
-    String quantity,
-  ) {
+      num amount, String ingredient, String quantity) {
     final intl.NumberFormat amountNumberFormat =
         intl.NumberFormat.decimalPattern(localeName);
     final String amountString = amountNumberFormat.format(amount);
@@ -1194,10 +1221,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String transitPTFormatModelMenuCatalog(
-    String index,
-    String catalog,
-    String details,
-  ) {
+      String index, String catalog, String details) {
     return '第$index個種類叫做 $catalog，$details。';
   }
 
@@ -1214,21 +1238,13 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String transitPTFormatModelMenuProduct(
-    String index,
-    String name,
-    String price,
-    String cost,
-    String details,
-  ) {
+      String index, String name, String price, String cost, String details) {
     return '第$index個產品叫做 $name，其售價為 $price 元，成本為 $cost 元，$details';
   }
 
   @override
   String transitPTFormatModelMenuProductDetails(
-    int count,
-    String names,
-    String details,
-  ) {
+      int count, String names, String details) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
@@ -1240,18 +1256,13 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String transitPTFormatModelMenuIngredient(
-    String amount,
-    String name,
-    String details,
-  ) {
+      String amount, String name, String details) {
     return '$amount 個 $name，$details';
   }
 
   @override
   String transitPTFormatModelMenuIngredientDetails(
-    int count,
-    String quantities,
-  ) {
+      int count, String quantities) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
@@ -1263,10 +1274,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String transitPTFormatModelMenuQuantity(
-    String amount,
-    String price,
-    String cost,
-  ) {
+      String amount, String price, String cost) {
     return '每份產品改成使用 $amount 個並調整產品售價 $price 元和成本 $cost 元';
   }
 
@@ -1285,11 +1293,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String transitPTFormatModelStockIngredient(
-    String index,
-    String name,
-    String amount,
-    String details,
-  ) {
+      String index, String name, String amount, String details) {
     return '第$index個成分叫做 $name，庫存現有 $amount 個$details。';
   }
 
@@ -1306,10 +1310,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String transitPTFormatModelStockIngredientRestockPrice(
-    int exist,
-    String quantity,
-    String price,
-  ) {
+      int exist, String quantity, String price) {
     String _temp0 = intl.Intl.pluralLogic(
       exist,
       locale: localeName,
@@ -1334,10 +1335,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String transitPTFormatModelQuantitiesQuantity(
-    String index,
-    String name,
-    String prop,
-  ) {
+      String index, String name, String prop) {
     return '第$index種份量叫做 $name，預設會讓成分的份量乘以 $prop 倍。';
   }
 
@@ -1356,10 +1354,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String transitPTFormatModelReplenisherReplenishment(
-    String index,
-    String name,
-    String details,
-  ) {
+      String index, String name, String details) {
     return '第$index個成分叫做 $name，$details。';
   }
 
@@ -1389,11 +1384,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String transitPTFormatModelOaOa(
-    String index,
-    String name,
-    String mode,
-    String details,
-  ) {
+      String index, String name, String mode, String details) {
     return '第$index種屬性叫做 $name，屬於 $mode 類型，$details。';
   }
 
@@ -1465,21 +1456,24 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String title(String name) {
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'analysis': '分析',
-      'stock': '庫存',
-      'cashier': '收銀',
-      'settings': '設定',
-      'menu': '菜單',
-      'printers': '出單機',
-      'transit': '資料轉移',
-      'orderAttributes': '顧客設定',
-      'stockQuantities': '份量',
-      'elf': '建議',
-      'more': '更多',
-      'debug': 'Debug',
-      'other': 'UNKNOWN',
-    });
+    String _temp0 = intl.Intl.selectLogic(
+      name,
+      {
+        'analysis': '分析',
+        'stock': '庫存',
+        'cashier': '收銀',
+        'settings': '設定',
+        'menu': '菜單',
+        'printers': '出單機',
+        'transit': '資料轉移',
+        'orderAttributes': '顧客設定',
+        'stockQuantities': '份量',
+        'elf': '建議',
+        'more': '更多',
+        'debug': 'Debug',
+        'other': 'UNKNOWN',
+      },
+    );
     return '$_temp0';
   }
 
@@ -1681,23 +1675,29 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String orderAttributeModeName(String name) {
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'statOnly': '一般',
-      'changePrice': '變價',
-      'changeDiscount': '折扣',
-      'other': 'UNKNOWN',
-    });
+    String _temp0 = intl.Intl.selectLogic(
+      name,
+      {
+        'statOnly': '一般',
+        'changePrice': '變價',
+        'changeDiscount': '折扣',
+        'other': 'UNKNOWN',
+      },
+    );
     return '$_temp0';
   }
 
   @override
   String orderAttributeModeHelper(String name) {
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'statOnly': '一般的設定，選取時並不會影響點單價格。',
-      'changePrice': '選取設定時，可能會影響價格。\n例如：外送 + 30塊錢、環保杯 - 5塊錢。',
-      'changeDiscount': '選取設定時，會根據折扣影響總價。\n例如：內用 + 10% 服務費、親友價 - 10%。',
-      'other': 'UNKNOWN',
-    });
+    String _temp0 = intl.Intl.selectLogic(
+      name,
+      {
+        'statOnly': '一般的設定，選取時並不會影響點單價格。',
+        'changePrice': '選取設定時，可能會影響價格。\n例如：外送 + 30塊錢、環保杯 - 5塊錢。',
+        'changeDiscount': '選取設定時，會根據折扣影響總價。\n例如：內用 + 10% 服務費、親友價 - 10%。',
+        'other': 'UNKNOWN',
+      },
+    );
     return '$_temp0';
   }
 
@@ -1742,23 +1742,29 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String orderAttributeOptionModeHelper(String name) {
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'statOnly': '因為本設定為「一般」故無須設定「折價」或「變價」',
-      'changePrice': '訂單時選擇此項會套用此變價',
-      'changeDiscount': '訂單時選擇此項會套用此折價',
-      'other': 'UNKNOWN',
-    });
+    String _temp0 = intl.Intl.selectLogic(
+      name,
+      {
+        'statOnly': '因為本設定為「一般」故無須設定「折價」或「變價」',
+        'changePrice': '訂單時選擇此項會套用此變價',
+        'changeDiscount': '訂單時選擇此項會套用此折價',
+        'other': 'UNKNOWN',
+      },
+    );
     return '$_temp0';
   }
 
   @override
   String orderAttributeOptionModeHint(String name) {
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'statOnly': '',
-      'changePrice': '例如：-30 代表減少三十塊',
-      'changeDiscount': '例如：80 代表「八折」',
-      'other': 'UNKNOWN',
-    });
+    String _temp0 = intl.Intl.selectLogic(
+      name,
+      {
+        'statOnly': '',
+        'changePrice': '例如：-30 代表減少三十塊',
+        'changeDiscount': '例如：80 代表「八折」',
+        'other': 'UNKNOWN',
+      },
+    );
     return '$_temp0';
   }
 
@@ -2218,13 +2224,16 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String cashierSurplusColumnName(String name) {
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'unit': '單位',
-      'currentCount': '現有',
-      'diffCount': '差異',
-      'defaultCount': '預設',
-      'other': 'UNKNOWN',
-    });
+    String _temp0 = intl.Intl.selectLogic(
+      name,
+      {
+        'unit': '單位',
+        'currentCount': '現有',
+        'diffCount': '差異',
+        'defaultCount': '預設',
+        'other': 'UNKNOWN',
+      },
+    );
     return '$_temp0';
   }
 
@@ -2329,11 +2338,14 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String orderProductListViewHelper(String name) {
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'grid': '圖片',
-      'list': '列表',
-      'other': 'UNKNOWN',
-    });
+    String _temp0 = intl.Intl.selectLogic(
+      name,
+      {
+        'grid': '圖片',
+        'list': '列表',
+        'other': 'UNKNOWN',
+      },
+    );
     return '$_temp0';
   }
 
@@ -2433,10 +2445,13 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String orderCartProductPrice(String price) {
-    String _temp0 = intl.Intl.selectLogic(price, {
-      '0': '免費',
-      'other': '$price元',
-    });
+    String _temp0 = intl.Intl.selectLogic(
+      price,
+      {
+        '0': '免費',
+        'other': '$price元',
+      },
+    );
     return '$_temp0';
   }
 
@@ -2453,12 +2468,15 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String orderCartIngredientStatus(String status) {
-    String _temp0 = intl.Intl.selectLogic(status, {
-      'emptyCart': '請選擇產品來設定其成分',
-      'differentProducts': '請選擇相同的產品來設定其成分',
-      'noNeedIngredient': '這個產品沒有可以設定的成分',
-      'other': 'UNKNOWN',
-    });
+    String _temp0 = intl.Intl.selectLogic(
+      status,
+      {
+        'emptyCart': '請選擇產品來設定其成分',
+        'differentProducts': '請選擇相同的產品來設定其成分',
+        'noNeedIngredient': '這個產品沒有可以設定的成分',
+        'other': 'UNKNOWN',
+      },
+    );
     return '$_temp0';
   }
 
@@ -2737,26 +2755,32 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String analysisChartMetricName(String name) {
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'revenue': '營收',
-      'cost': '成本',
-      'profit': '淨利',
-      'count': '數量',
-      'other': 'UNKNOWN',
-    });
+    String _temp0 = intl.Intl.selectLogic(
+      name,
+      {
+        'revenue': '營收',
+        'cost': '成本',
+        'profit': '淨利',
+        'count': '數量',
+        'other': 'UNKNOWN',
+      },
+    );
     return '$_temp0';
   }
 
   @override
   String analysisChartTargetName(String name) {
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'order': '訂單',
-      'catalog': '產品種類',
-      'product': '產品',
-      'ingredient': '成分',
-      'attribute': '顧客屬性',
-      'other': 'UNKNOWN',
-    });
+    String _temp0 = intl.Intl.selectLogic(
+      name,
+      {
+        'order': '訂單',
+        'catalog': '產品種類',
+        'product': '產品',
+        'ingredient': '成分',
+        'attribute': '顧客屬性',
+        'other': 'UNKNOWN',
+      },
+    );
     return '$_temp0';
   }
 
@@ -2786,13 +2810,16 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String analysisChartRangeTabName(String name) {
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'day': '日期',
-      'week': '週',
-      'month': '月',
-      'custom': '自訂',
-      'other': 'UNKNOWN',
-    });
+    String _temp0 = intl.Intl.selectLogic(
+      name,
+      {
+        'day': '日期',
+        'week': '週',
+        'month': '月',
+        'custom': '自訂',
+        'other': 'UNKNOWN',
+      },
+    );
     return '$_temp0';
   }
 
@@ -2816,11 +2843,14 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String analysisChartModalTypeName(String name) {
-    String _temp0 = intl.Intl.selectLogic(name, {
-      'cartesian': '時序圖',
-      'circular': '圓餅圖',
-      'other': 'UNKNOWN',
-    });
+    String _temp0 = intl.Intl.selectLogic(
+      name,
+      {
+        'cartesian': '時序圖',
+        'circular': '圓餅圖',
+        'other': 'UNKNOWN',
+      },
+    );
     return '$_temp0';
   }
 

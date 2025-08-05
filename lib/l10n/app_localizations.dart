@@ -62,7 +62,7 @@ import 'app_localizations_zh.dart' deferred as app_localizations_zh;
 /// property.
 abstract class AppLocalizations {
   AppLocalizations(String locale)
-    : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+      : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
@@ -85,16 +85,16 @@ abstract class AppLocalizations {
   /// of delegates is preferred or required.
   static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
       <LocalizationsDelegate<dynamic>>[
-        delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-      ];
+    delegate,
+    GlobalMaterialLocalizations.delegate,
+    GlobalCupertinoLocalizations.delegate,
+    GlobalWidgetsLocalizations.delegate,
+  ];
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
     Locale('en'),
-    Locale('zh'),
+    Locale('zh')
   ];
 
   /// No description provided for @settingTab.
@@ -1758,10 +1758,7 @@ abstract class AppLocalizations {
   /// In zh, this message translates to:
   /// **'{hasProducts, plural, =0{共 {price} 元。} other{共 {price} 元，其中的 {productsPrice} 元是產品價錢。}}'**
   String transitPTFormatOrderPrice(
-    int hasProducts,
-    String price,
-    String productsPrice,
-  );
+      int hasProducts, String price, String productsPrice);
 
   /// No description provided for @transitPTFormatOrderMoney.
   ///
@@ -1774,33 +1771,21 @@ abstract class AppLocalizations {
   /// In zh, this message translates to:
   /// **'{count, plural, =0{沒有任何餐點。} =1{餐點有 {count} 份，內容為：\n{products}。} other{餐點有 {count} 份（{setCount} 種組合）包括：\n{products}。}}'**
   String transitPTFormatOrderProductCount(
-    int count,
-    int setCount,
-    String products,
-  );
+      int count, int setCount, String products);
 
   /// No description provided for @transitPTFormatOrderProduct.
   ///
   /// In zh, this message translates to:
   /// **'{hasIngredient, plural, =0{{product}（{catalog}）{count} 份共 {price} 元，沒有設定成分} other{{product}（{catalog}）{count} 份共 {price} 元，成份包括 {ingredients}}}'**
-  String transitPTFormatOrderProduct(
-    int hasIngredient,
-    String product,
-    String catalog,
-    int count,
-    String price,
-    String ingredients,
-  );
+  String transitPTFormatOrderProduct(int hasIngredient, String product,
+      String catalog, int count, String price, String ingredients);
 
   /// Details of ingredients and quantities for each product in the order list
   ///
   /// In zh, this message translates to:
   /// **'{amount, plural, =0{{ingredient}（{quantity}）} other{{ingredient}（{quantity}），使用 {amount} 個}}'**
   String transitPTFormatOrderIngredient(
-    num amount,
-    String ingredient,
-    String quantity,
-  );
+      num amount, String ingredient, String quantity);
 
   /// No description provided for @transitPTFormatOrderNoQuantity.
   ///
@@ -1849,10 +1834,7 @@ abstract class AppLocalizations {
   /// In zh, this message translates to:
   /// **'第{index}個種類叫做 {catalog}，{details}。'**
   String transitPTFormatModelMenuCatalog(
-    String index,
-    String catalog,
-    String details,
-  );
+      String index, String catalog, String details);
 
   /// No description provided for @transitPTFormatModelMenuCatalogDetails.
   ///
@@ -1865,51 +1847,35 @@ abstract class AppLocalizations {
   /// In zh, this message translates to:
   /// **'第{index}個產品叫做 {name}，其售價為 {price} 元，成本為 {cost} 元，{details}'**
   String transitPTFormatModelMenuProduct(
-    String index,
-    String name,
-    String price,
-    String cost,
-    String details,
-  );
+      String index, String name, String price, String cost, String details);
 
   /// No description provided for @transitPTFormatModelMenuProductDetails.
   ///
   /// In zh, this message translates to:
   /// **'{count, plural, =0{它沒有設定任何成份。} other{它的成份有 {count} 種：{names}。\n每份產品預設需要使用 {details}。}}'**
   String transitPTFormatModelMenuProductDetails(
-    int count,
-    String names,
-    String details,
-  );
+      int count, String names, String details);
 
   /// Strings are used so that regex can be inserted here during import to obtain information
   ///
   /// In zh, this message translates to:
   /// **'{amount} 個 {name}，{details}'**
   String transitPTFormatModelMenuIngredient(
-    String amount,
-    String name,
-    String details,
-  );
+      String amount, String name, String details);
 
   /// No description provided for @transitPTFormatModelMenuIngredientDetails.
   ///
   /// In zh, this message translates to:
   /// **'{count, plural, =0{無法做份量調整} other{它還有 {count} 個不同份量 {quantities}}}'**
   String transitPTFormatModelMenuIngredientDetails(
-    int count,
-    String quantities,
-  );
+      int count, String quantities);
 
   /// Strings are used so that regex can be inserted here during import to obtain information
   ///
   /// In zh, this message translates to:
   /// **'每份產品改成使用 {amount} 個並調整產品售價 {price} 元和成本 {cost} 元'**
   String transitPTFormatModelMenuQuantity(
-    String amount,
-    String price,
-    String cost,
-  );
+      String amount, String price, String cost);
 
   /// No description provided for @transitPTFormatModelStockMetaIngredient.
   ///
@@ -1934,11 +1900,7 @@ abstract class AppLocalizations {
   /// In zh, this message translates to:
   /// **'第{index}個成分叫做 {name}，庫存現有 {amount} 個{details}。'**
   String transitPTFormatModelStockIngredient(
-    String index,
-    String name,
-    String amount,
-    String details,
-  );
+      String index, String name, String amount, String details);
 
   /// String(max) are used so that regex can be inserted here during import to obtain information
   ///
@@ -1951,10 +1913,7 @@ abstract class AppLocalizations {
   /// In zh, this message translates to:
   /// **'{exist, plural, =0{} other{且每 {quantity} 個成本要價 {price} 元}}'**
   String transitPTFormatModelStockIngredientRestockPrice(
-    int exist,
-    String quantity,
-    String price,
-  );
+      int exist, String quantity, String price);
 
   /// No description provided for @transitPTFormatModelQuantitiesMetaQuantity.
   ///
@@ -1979,10 +1938,7 @@ abstract class AppLocalizations {
   /// In zh, this message translates to:
   /// **'第{index}種份量叫做 {name}，預設會讓成分的份量乘以 {prop} 倍。'**
   String transitPTFormatModelQuantitiesQuantity(
-    String index,
-    String name,
-    String prop,
-  );
+      String index, String name, String prop);
 
   /// No description provided for @transitPTFormatModelReplenisherMetaReplenishment.
   ///
@@ -2007,10 +1963,7 @@ abstract class AppLocalizations {
   /// In zh, this message translates to:
   /// **'第{index}個成分叫做 {name}，{details}。'**
   String transitPTFormatModelReplenisherReplenishment(
-    String index,
-    String name,
-    String details,
-  );
+      String index, String name, String details);
 
   /// No description provided for @transitPTFormatModelReplenisherReplenishmentDetails.
   ///
@@ -2041,11 +1994,7 @@ abstract class AppLocalizations {
   /// In zh, this message translates to:
   /// **'第{index}種屬性叫做 {name}，屬於 {mode} 類型，{details}。'**
   String transitPTFormatModelOaOa(
-    String index,
-    String name,
-    String mode,
-    String details,
-  );
+      String index, String name, String mode, String details);
 
   /// No description provided for @transitPTFormatModelOaOaDetails.
   ///
@@ -4295,19 +4244,18 @@ Future<AppLocalizations> lookupAppLocalizations(Locale locale) {
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
     case 'en':
-      return app_localizations_en.loadLibrary().then(
-        (dynamic _) => app_localizations_en.AppLocalizationsEn(),
-      );
+      return app_localizations_en
+          .loadLibrary()
+          .then((dynamic _) => app_localizations_en.AppLocalizationsEn());
     case 'zh':
-      return app_localizations_zh.loadLibrary().then(
-        (dynamic _) => app_localizations_zh.AppLocalizationsZh(),
-      );
+      return app_localizations_zh
+          .loadLibrary()
+          .then((dynamic _) => app_localizations_zh.AppLocalizationsZh());
   }
 
   throw FlutterError(
-    'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
-    'an issue with the localizations generation tool. Please file an issue '
-    'on GitHub with a reproducible sample app and the gen-l10n configuration '
-    'that was used.',
-  );
+      'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
+      'an issue with the localizations generation tool. Please file an issue '
+      'on GitHub with a reproducible sample app and the gen-l10n configuration '
+      'that was used.');
 }
