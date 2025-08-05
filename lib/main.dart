@@ -337,7 +337,7 @@ class MyApp extends StatelessWidget {
           Locale('en'),
           Locale('zh'),
         ],
-        home:App(), // Your main App widget
+        home:const App(), // Your main App widget
       ),
     );
   }
