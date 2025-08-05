@@ -45,15 +45,12 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String settingThemeName(String name) {
-    String _temp0 = intl.Intl.selectLogic(
-      name,
-      {
-        'dark': 'Dark Mode',
-        'light': 'Light Mode',
-        'system': 'Follow System',
-        'other': 'UNKNOWN',
-      },
-    );
+    String _temp0 = intl.Intl.selectLogic(name, {
+      'dark': 'Dark Mode',
+      'light': 'Light Mode',
+      'system': 'Follow System',
+      'other': 'UNKNOWN',
+    });
     return '$_temp0';
   }
 
@@ -65,30 +62,24 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String settingCheckoutWarningName(String name) {
-    String _temp0 = intl.Intl.selectLogic(
-      name,
-      {
-        'showAll': 'Show All',
-        'onlyNotEnough': 'Show Only When Not Enough',
-        'hideAll': 'Hide All',
-        'other': 'UNKNOWN',
-      },
-    );
+    String _temp0 = intl.Intl.selectLogic(name, {
+      'showAll': 'Show All',
+      'onlyNotEnough': 'Show Only When Not Enough',
+      'hideAll': 'Hide All',
+      'other': 'UNKNOWN',
+    });
     return '$_temp0';
   }
 
   @override
   String settingCheckoutWarningTip(String name) {
-    String _temp0 = intl.Intl.selectLogic(
-      name,
-      {
-        'showAll':
-            'Show warning when using smaller denominations to give change.\nFor example, if \$5 is not enough, start using 5 \$1 bills for change.',
-        'onlyNotEnough': 'Show warning when cash registry not enough money.',
-        'hideAll': 'Won\'t display any warnings during ordering.',
-        'other': 'UNKNOWN',
-      },
-    );
+    String _temp0 = intl.Intl.selectLogic(name, {
+      'showAll':
+          'Show warning when using smaller denominations to give change.\nFor example, if \$5 is not enough, start using 5 \$1 bills for change.',
+      'onlyNotEnough': 'Show warning when cash registry not enough money.',
+      'hideAll': 'Won\'t display any warnings during ordering.',
+      'other': 'UNKNOWN',
+    });
     return '$_temp0';
   }
 
@@ -111,8 +102,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String stockUpdatedAt(DateTime updatedAt) {
-    final intl.DateFormat updatedAtDateFormat =
-        intl.DateFormat.MMMEd(localeName);
+    final intl.DateFormat updatedAtDateFormat = intl.DateFormat.MMMEd(
+      localeName,
+    );
     final String updatedAtString = updatedAtDateFormat.format(updatedAt);
 
     return 'Last Purchased: $updatedAtString';
@@ -257,14 +249,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String stockReplenishmentApplyConfirmColumn(String value) {
-    String _temp0 = intl.Intl.selectLogic(
-      value,
-      {
-        'name': 'Name',
-        'amount': 'Amount',
-        'other': 'UNKNOWN',
-      },
-    );
+    String _temp0 = intl.Intl.selectLogic(value, {
+      'name': 'Name',
+      'amount': 'Amount',
+      'other': 'UNKNOWN',
+    });
     return '$_temp0';
   }
 
@@ -400,33 +389,27 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String printerStatusName(String name) {
-    String _temp0 = intl.Intl.selectLogic(
-      name,
-      {
-        'good': 'All Good',
-        'writeFailed': 'Last Print Failed',
-        'paperNotFound': 'Paper Not Found',
-        'tooHot': 'Printer Overheated',
-        'lowBattery': 'Low Battery',
-        'printing': 'Printing',
-        'unknown': 'Unknown',
-        'other': 'UNKNOWN',
-      },
-    );
+    String _temp0 = intl.Intl.selectLogic(name, {
+      'good': 'All Good',
+      'writeFailed': 'Last Print Failed',
+      'paperNotFound': 'Paper Not Found',
+      'tooHot': 'Printer Overheated',
+      'lowBattery': 'Low Battery',
+      'printing': 'Printing',
+      'unknown': 'Unknown',
+      'other': 'UNKNOWN',
+    });
     return '$_temp0';
   }
 
   @override
   String printerSignalName(String name) {
-    String _temp0 = intl.Intl.selectLogic(
-      name,
-      {
-        'good': 'Good',
-        'normal': 'Normal',
-        'weak': 'Weak',
-        'other': 'UNKNOWN',
-      },
-    );
+    String _temp0 = intl.Intl.selectLogic(name, {
+      'good': 'Good',
+      'normal': 'Normal',
+      'weak': 'Weak',
+      'other': 'UNKNOWN',
+    });
     return '$_temp0';
   }
 
@@ -591,61 +574,49 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String transitMethodName(String name) {
-    String _temp0 = intl.Intl.selectLogic(
-      name,
-      {
-        'googleSheet': 'Google Sheets',
-        'plainText': 'Plain Text',
-        'other': 'UNKNOWN',
-      },
-    );
+    String _temp0 = intl.Intl.selectLogic(name, {
+      'googleSheet': 'Google Sheets',
+      'plainText': 'Plain Text',
+      'other': 'UNKNOWN',
+    });
     return '$_temp0';
   }
 
   @override
   String transitCatalogName(String name) {
-    String _temp0 = intl.Intl.selectLogic(
-      name,
-      {
-        'order': 'Order Records',
-        'model': 'Store Information',
-        'other': 'UNKNOWN',
-      },
-    );
+    String _temp0 = intl.Intl.selectLogic(name, {
+      'order': 'Order Records',
+      'model': 'Store Information',
+      'other': 'UNKNOWN',
+    });
     return '$_temp0';
   }
 
   @override
   String transitCatalogHelper(String name) {
-    String _temp0 = intl.Intl.selectLogic(
-      name,
-      {
-        'order': 'Export order info for detailed statistical analysis.',
-        'model':
-            'Store info is usually used to sync menu, inventory, etc., to third-party locations or to import to another device.',
-        'other': 'UNKNOWN',
-      },
-    );
+    String _temp0 = intl.Intl.selectLogic(name, {
+      'order': 'Export order info for detailed statistical analysis.',
+      'model':
+          'Store info is usually used to sync menu, inventory, etc., to third-party locations or to import to another device.',
+      'other': 'UNKNOWN',
+    });
     return '$_temp0';
   }
 
   @override
   String transitModelName(String name) {
-    String _temp0 = intl.Intl.selectLogic(
-      name,
-      {
-        'menu': 'Menu',
-        'stock': 'Inventory',
-        'quantities': 'Quantities',
-        'replenisher': 'Replenisher',
-        'orderAttr': 'Customer Settings',
-        'order': 'Order',
-        'orderDetailsAttr': 'Order Customer Settings',
-        'orderDetailsProduct': 'Order Product Details',
-        'orderDetailsIngredient': 'Order Ingredient Details',
-        'other': 'UNKNOWN',
-      },
-    );
+    String _temp0 = intl.Intl.selectLogic(name, {
+      'menu': 'Menu',
+      'stock': 'Inventory',
+      'quantities': 'Quantities',
+      'replenisher': 'Replenisher',
+      'orderAttr': 'Customer Settings',
+      'order': 'Order',
+      'orderDetailsAttr': 'Order Customer Settings',
+      'orderDetailsProduct': 'Order Product Details',
+      'orderDetailsIngredient': 'Order Ingredient Details',
+      'other': 'UNKNOWN',
+    });
     return '$_temp0';
   }
 
@@ -679,8 +650,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String transitOrderItemTitle(DateTime date) {
-    final intl.DateFormat dateDateFormat =
-        intl.DateFormat('MMM d HH:mm:ss', localeName);
+    final intl.DateFormat dateDateFormat = intl.DateFormat(
+      'MMM d HH:mm:ss',
+      localeName,
+    );
     final String dateString = dateDateFormat.format(date);
 
     return '$dateString';
@@ -764,17 +737,14 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String transitImportColumnStatus(String name) {
-    String _temp0 = intl.Intl.selectLogic(
-      name,
-      {
-        'normal': '(Normal)',
-        'staged': '(New)',
-        'stagedIng': '(New Ingredient)',
-        'stagedQua': '(New Quantity)',
-        'updated': '(Updated)',
-        'other': 'UNKNOWN',
-      },
-    );
+    String _temp0 = intl.Intl.selectLogic(name, {
+      'normal': '(Normal)',
+      'staged': '(New)',
+      'stagedIng': '(New Ingredient)',
+      'stagedQua': '(New Quantity)',
+      'updated': '(Updated)',
+      'other': 'UNKNOWN',
+    });
     return '$_temp0';
   }
 
@@ -853,13 +823,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String transitGSSpreadsheetSelectionHint(String name) {
-    String _temp0 = intl.Intl.selectLogic(
-      name,
-      {
-        '_': 'Enter the spreadsheet URL or spreadsheet ID',
-        'other': 'The current spreadsheet is \"$name\"',
-      },
-    );
+    String _temp0 = intl.Intl.selectLogic(name, {
+      '_': 'Enter the spreadsheet URL or spreadsheet ID',
+      'other': 'The current spreadsheet is \"$name\"',
+    });
     return '$_temp0';
   }
 
@@ -902,21 +869,18 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String transitGSModelStatus(String model) {
-    String _temp0 = intl.Intl.selectLogic(
-      model,
-      {
-        'menu': 'Updating Menu...',
-        'stock': 'Updating Inventory...',
-        'quantities': 'Updating Quantities...',
-        'replenisher': 'Updating Replenisher...',
-        'orderAttr': 'Exporting Customer Settings...',
-        'order': 'Exporting Orders...',
-        'orderDetailsAttr': 'Exporting Order Customer Settings...',
-        'orderDetailsProduct': 'Exporting Order Product Details...',
-        'orderDetailsIngredient': 'Exporting Order Ingredient Details...',
-        'other': 'UNKNOWN',
-      },
-    );
+    String _temp0 = intl.Intl.selectLogic(model, {
+      'menu': 'Updating Menu...',
+      'stock': 'Updating Inventory...',
+      'quantities': 'Updating Quantities...',
+      'replenisher': 'Updating Replenisher...',
+      'orderAttr': 'Exporting Customer Settings...',
+      'order': 'Exporting Orders...',
+      'orderDetailsAttr': 'Exporting Order Customer Settings...',
+      'orderDetailsProduct': 'Exporting Order Product Details...',
+      'orderDetailsIngredient': 'Exporting Order Ingredient Details...',
+      'other': 'UNKNOWN',
+    });
     return '$_temp0';
   }
 
@@ -980,27 +944,21 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String transitGSOrderMetaOverwrite(String value) {
-    String _temp0 = intl.Intl.selectLogic(
-      value,
-      {
-        'true': 'Will overwrite',
-        'false': 'Won\'t overwrite',
-        'other': 'UNKNOWN',
-      },
-    );
+    String _temp0 = intl.Intl.selectLogic(value, {
+      'true': 'Will overwrite',
+      'false': 'Won\'t overwrite',
+      'other': 'UNKNOWN',
+    });
     return '$_temp0';
   }
 
   @override
   String transitGSOrderMetaTitlePrefix(String value) {
-    String _temp0 = intl.Intl.selectLogic(
-      value,
-      {
-        'true': 'Has date prefix',
-        'false': 'No date prefix',
-        'other': 'UNKNOWN',
-      },
-    );
+    String _temp0 = intl.Intl.selectLogic(value, {
+      'true': 'Has date prefix',
+      'false': 'No date prefix',
+      'other': 'UNKNOWN',
+    });
     return '$_temp0';
   }
 
@@ -1175,7 +1133,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String transitPTFormatOrderPrice(
-      int hasProducts, String price, String productsPrice) {
+    int hasProducts,
+    String price,
+    String productsPrice,
+  ) {
     String _temp0 = intl.Intl.pluralLogic(
       hasProducts,
       locale: localeName,
@@ -1192,7 +1153,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String transitPTFormatOrderProductCount(
-      int count, int setCount, String products) {
+    int count,
+    int setCount,
+    String products,
+  ) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
@@ -1205,8 +1169,14 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String transitPTFormatOrderProduct(int hasIngredient, String product,
-      String catalog, int count, String price, String ingredients) {
+  String transitPTFormatOrderProduct(
+    int hasIngredient,
+    String product,
+    String catalog,
+    int count,
+    String price,
+    String ingredients,
+  ) {
     String _temp0 = intl.Intl.pluralLogic(
       hasIngredient,
       locale: localeName,
@@ -1220,7 +1190,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String transitPTFormatOrderIngredient(
-      num amount, String ingredient, String quantity) {
+    num amount,
+    String ingredient,
+    String quantity,
+  ) {
     final intl.NumberFormat amountNumberFormat =
         intl.NumberFormat.decimalPattern(localeName);
     final String amountString = amountNumberFormat.format(amount);
@@ -1267,7 +1240,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String transitPTFormatModelMenuCatalog(
-      String index, String catalog, String details) {
+    String index,
+    String catalog,
+    String details,
+  ) {
     return 'Category $index is called $catalog and $details.';
   }
 
@@ -1285,13 +1261,21 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String transitPTFormatModelMenuProduct(
-      String index, String name, String price, String cost, String details) {
+    String index,
+    String name,
+    String price,
+    String cost,
+    String details,
+  ) {
     return 'Product $index is called $name, with price at \$$price, cost \$$cost and $details';
   }
 
   @override
   String transitPTFormatModelMenuProductDetails(
-      int count, String names, String details) {
+    int count,
+    String names,
+    String details,
+  ) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
@@ -1305,13 +1289,18 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String transitPTFormatModelMenuIngredient(
-      String amount, String name, String details) {
+    String amount,
+    String name,
+    String details,
+  ) {
     return '$amount of $name and $details';
   }
 
   @override
   String transitPTFormatModelMenuIngredientDetails(
-      int count, String quantities) {
+    int count,
+    String quantities,
+  ) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
@@ -1324,7 +1313,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String transitPTFormatModelMenuQuantity(
-      String amount, String price, String cost) {
+    String amount,
+    String price,
+    String cost,
+  ) {
     return 'quantity $amount with additional price \$$price and cost \$$cost';
   }
 
@@ -1343,7 +1335,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String transitPTFormatModelStockIngredient(
-      String index, String name, String amount, String details) {
+    String index,
+    String name,
+    String amount,
+    String details,
+  ) {
     return 'Ingredient at $index is called $name, with $amount amount$details.';
   }
 
@@ -1360,7 +1356,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String transitPTFormatModelStockIngredientRestockPrice(
-      int exist, String quantity, String price) {
+    int exist,
+    String quantity,
+    String price,
+  ) {
     String _temp0 = intl.Intl.pluralLogic(
       exist,
       locale: localeName,
@@ -1386,7 +1385,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String transitPTFormatModelQuantitiesQuantity(
-      String index, String name, String prop) {
+    String index,
+    String name,
+    String prop,
+  ) {
     return 'Quantity at $index is called $name, which defaults to multiplying ingredient quantity by $prop.';
   }
 
@@ -1406,7 +1408,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String transitPTFormatModelReplenisherReplenishment(
-      String index, String name, String details) {
+    String index,
+    String name,
+    String details,
+  ) {
     return 'Replenishment method at $index is called $name, $details.';
   }
 
@@ -1437,7 +1442,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String transitPTFormatModelOaOa(
-      String index, String name, String mode, String details) {
+    String index,
+    String name,
+    String mode,
+    String details,
+  ) {
     return 'Attribute at $index is called $name, belongs to $mode type, $details.';
   }
 
@@ -1512,24 +1521,21 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String title(String name) {
-    String _temp0 = intl.Intl.selectLogic(
-      name,
-      {
-        'analysis': 'Stats',
-        'stock': 'Inventory',
-        'cashier': 'Cashier',
-        'settings': 'Settings',
-        'menu': 'Menu',
-        'printers': 'Printer',
-        'transit': 'Data Transfer',
-        'orderAttributes': 'Customer Settings',
-        'stockQuantities': 'Quantities',
-        'elf': 'Suggestions',
-        'more': 'More',
-        'debug': 'Debug',
-        'other': 'UNKNOWN',
-      },
-    );
+    String _temp0 = intl.Intl.selectLogic(name, {
+      'analysis': 'Stats',
+      'stock': 'Inventory',
+      'cashier': 'Cashier',
+      'settings': 'Settings',
+      'menu': 'Menu',
+      'printers': 'Printer',
+      'transit': 'Data Transfer',
+      'orderAttributes': 'Customer Settings',
+      'stockQuantities': 'Quantities',
+      'elf': 'Suggestions',
+      'more': 'More',
+      'debug': 'Debug',
+      'other': 'UNKNOWN',
+    });
     return '$_temp0';
   }
 
@@ -1735,31 +1741,25 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String orderAttributeModeName(String name) {
-    String _temp0 = intl.Intl.selectLogic(
-      name,
-      {
-        'statOnly': 'Normal',
-        'changePrice': 'Price Change',
-        'changeDiscount': 'Discount',
-        'other': 'UNKNOWN',
-      },
-    );
+    String _temp0 = intl.Intl.selectLogic(name, {
+      'statOnly': 'Normal',
+      'changePrice': 'Price Change',
+      'changeDiscount': 'Discount',
+      'other': 'UNKNOWN',
+    });
     return '$_temp0';
   }
 
   @override
   String orderAttributeModeHelper(String name) {
-    String _temp0 = intl.Intl.selectLogic(
-      name,
-      {
-        'statOnly': 'Normal setting, selecting won\'t affect the order price.',
-        'changePrice':
-            'Selecting this setting may affect the order price.\nFor example: Takeout +\$30, Eco Cup -\$5.',
-        'changeDiscount':
-            'Selecting this setting will affect the total price based on the discount.\nFor example: Dine-in +10% service charge, Friends & Family Discount -10%.',
-        'other': 'UNKNOWN',
-      },
-    );
+    String _temp0 = intl.Intl.selectLogic(name, {
+      'statOnly': 'Normal setting, selecting won\'t affect the order price.',
+      'changePrice':
+          'Selecting this setting may affect the order price.\nFor example: Takeout +\$30, Eco Cup -\$5.',
+      'changeDiscount':
+          'Selecting this setting will affect the total price based on the discount.\nFor example: Dine-in +10% service charge, Friends & Family Discount -10%.',
+      'other': 'UNKNOWN',
+    });
     return '$_temp0';
   }
 
@@ -1804,32 +1804,26 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String orderAttributeOptionModeHelper(String name) {
-    String _temp0 = intl.Intl.selectLogic(
-      name,
-      {
-        'statOnly':
-            'No need to set \"Discount\" or \"Price Change\" because this setting is \"Normal\"',
-        'changePrice':
-            'Selecting this option during ordering will apply this price change',
-        'changeDiscount':
-            'Selecting this option during ordering will apply this discount',
-        'other': 'UNKNOWN',
-      },
-    );
+    String _temp0 = intl.Intl.selectLogic(name, {
+      'statOnly':
+          'No need to set \"Discount\" or \"Price Change\" because this setting is \"Normal\"',
+      'changePrice':
+          'Selecting this option during ordering will apply this price change',
+      'changeDiscount':
+          'Selecting this option during ordering will apply this discount',
+      'other': 'UNKNOWN',
+    });
     return '$_temp0';
   }
 
   @override
   String orderAttributeOptionModeHint(String name) {
-    String _temp0 = intl.Intl.selectLogic(
-      name,
-      {
-        'statOnly': '',
-        'changePrice': 'For example: -30 means decrease by thirty dollars',
-        'changeDiscount': 'For example: 80 means \"20% off\"',
-        'other': 'UNKNOWN',
-      },
-    );
+    String _temp0 = intl.Intl.selectLogic(name, {
+      'statOnly': '',
+      'changePrice': 'For example: -30 means decrease by thirty dollars',
+      'changeDiscount': 'For example: 80 means \"20% off\"',
+      'other': 'UNKNOWN',
+    });
     return '$_temp0';
   }
 
@@ -2308,16 +2302,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String cashierSurplusColumnName(String name) {
-    String _temp0 = intl.Intl.selectLogic(
-      name,
-      {
-        'unit': 'Unit',
-        'currentCount': 'Current',
-        'diffCount': 'Difference',
-        'defaultCount': 'Default',
-        'other': 'UNKNOWN',
-      },
-    );
+    String _temp0 = intl.Intl.selectLogic(name, {
+      'unit': 'Unit',
+      'currentCount': 'Current',
+      'diffCount': 'Difference',
+      'defaultCount': 'Default',
+      'other': 'UNKNOWN',
+    });
     return '$_temp0';
   }
 
@@ -2426,14 +2417,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String orderProductListViewHelper(String name) {
-    String _temp0 = intl.Intl.selectLogic(
-      name,
-      {
-        'grid': 'Grid',
-        'list': 'List',
-        'other': 'UNKNOWN',
-      },
-    );
+    String _temp0 = intl.Intl.selectLogic(name, {
+      'grid': 'Grid',
+      'list': 'List',
+      'other': 'UNKNOWN',
+    });
     return '$_temp0';
   }
 
@@ -2533,13 +2521,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String orderCartProductPrice(String price) {
-    String _temp0 = intl.Intl.selectLogic(
-      price,
-      {
-        '0': 'Free',
-        'other': '\$$price',
-      },
-    );
+    String _temp0 = intl.Intl.selectLogic(price, {
+      '0': 'Free',
+      'other': '\$$price',
+    });
     return '$_temp0';
   }
 
@@ -2556,16 +2541,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String orderCartIngredientStatus(String status) {
-    String _temp0 = intl.Intl.selectLogic(
-      status,
-      {
-        'emptyCart': 'Please select a product to set its ingredients',
-        'differentProducts':
-            'Please select the same product to set its ingredients',
-        'noNeedIngredient': 'This product doesn\'t require ingredient settings',
-        'other': 'UNKNOWN',
-      },
-    );
+    String _temp0 = intl.Intl.selectLogic(status, {
+      'emptyCart': 'Please select a product to set its ingredients',
+      'differentProducts':
+          'Please select the same product to set its ingredients',
+      'noNeedIngredient': 'This product doesn\'t require ingredient settings',
+      'other': 'UNKNOWN',
+    });
     return '$_temp0';
   }
 
@@ -2847,32 +2829,26 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String analysisChartMetricName(String name) {
-    String _temp0 = intl.Intl.selectLogic(
-      name,
-      {
-        'revenue': 'Revenue',
-        'cost': 'Cost',
-        'profit': 'Profit',
-        'count': 'Quantity',
-        'other': 'UNKNOWN',
-      },
-    );
+    String _temp0 = intl.Intl.selectLogic(name, {
+      'revenue': 'Revenue',
+      'cost': 'Cost',
+      'profit': 'Profit',
+      'count': 'Quantity',
+      'other': 'UNKNOWN',
+    });
     return '$_temp0';
   }
 
   @override
   String analysisChartTargetName(String name) {
-    String _temp0 = intl.Intl.selectLogic(
-      name,
-      {
-        'order': 'Order',
-        'catalog': 'Category',
-        'product': 'Product',
-        'ingredient': 'Ingredient',
-        'attribute': 'Attribute',
-        'other': 'UNKNOWN',
-      },
-    );
+    String _temp0 = intl.Intl.selectLogic(name, {
+      'order': 'Order',
+      'catalog': 'Category',
+      'product': 'Product',
+      'ingredient': 'Ingredient',
+      'attribute': 'Attribute',
+      'other': 'UNKNOWN',
+    });
     return '$_temp0';
   }
 
@@ -2902,16 +2878,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String analysisChartRangeTabName(String name) {
-    String _temp0 = intl.Intl.selectLogic(
-      name,
-      {
-        'day': 'Date',
-        'week': 'Week',
-        'month': 'Month',
-        'custom': 'Custom',
-        'other': 'UNKNOWN',
-      },
-    );
+    String _temp0 = intl.Intl.selectLogic(name, {
+      'day': 'Date',
+      'week': 'Week',
+      'month': 'Month',
+      'custom': 'Custom',
+      'other': 'UNKNOWN',
+    });
     return '$_temp0';
   }
 
@@ -2936,14 +2909,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String analysisChartModalTypeName(String name) {
-    String _temp0 = intl.Intl.selectLogic(
-      name,
-      {
-        'cartesian': 'Time Series Chart',
-        'circular': 'Pie Chart',
-        'other': 'UNKNOWN',
-      },
-    );
+    String _temp0 = intl.Intl.selectLogic(name, {
+      'cartesian': 'Time Series Chart',
+      'circular': 'Pie Chart',
+      'other': 'UNKNOWN',
+    });
     return '$_temp0';
   }
 

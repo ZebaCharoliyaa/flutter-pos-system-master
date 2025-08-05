@@ -41,10 +41,10 @@ android {
 
     defaultConfig {
         applicationId "com.evanlu.possystem"
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
-        versionCode = flutter.versionCode
-        versionName = flutter.versionName
+        minSdkVersion 23
+        targetSdkVersion 34
+        versionCode 1
+        versionName "1.0"
     }
 
     signingConfigs {
@@ -73,17 +73,17 @@ android {
         }
     }
 
-    flavorDimensions "mode"
+    // flavorDimensions "mode"
 
-    productFlavors {
-        prod {
-            dimension "mode"
-        }
-        dev {
-            dimension "mode"
-            versionNameSuffix "-dev+" + buildNumber
-        }
-    }
+    // productFlavors {
+    //     prod {
+    //         dimension "mode"
+    //     }
+    //     dev {
+    //         dimension "mode"
+    //         versionNameSuffix "-dev+" + buildNumber
+    //     }
+    // }
 
     lintOptions {
         disable 'InvalidPackage'
